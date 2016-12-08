@@ -28,4 +28,5 @@
 *.app
 
 # Sphinx
+build
 build/*
