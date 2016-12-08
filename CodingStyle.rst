@@ -42,7 +42,7 @@ Make sure your line ends are set to Linux/Unix or just to Line Feed and not, car
 Labels
 ------
 
-Labels are optional in most cases, but are used for various things such as the destination of a ``BRA`` or ``JRS`` for example.
+Labels are optional in most cases, but are used for various things such as the destination of a ``BRA`` or ``JSR`` for example.
 
 They should be 'lower_case_with_underscores', or 'CamelCaseWithoutUnderscores'. These days I prefer the latter, but back then, I used pretty much anything but mainly the former.
 
@@ -98,7 +98,7 @@ Sections of your code, perhaps a function or procedure should have a descriptive
 
 The full width above is only 70 characters.
 
-Particularly noteworthy sections of the main code should be described with something simialr to the following::
+Particularly noteworthy sections of the main code should be described with something similar to the following::
 
     *--------------------------------------------------------------------*
     * EXTOP routine used by SCREEN_BASE, returns address of the screen   *
