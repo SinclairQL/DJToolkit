@@ -26,3 +26,6 @@
 # Executables
 *.exe
 *.app
+
+# Sphinx
+build/*
