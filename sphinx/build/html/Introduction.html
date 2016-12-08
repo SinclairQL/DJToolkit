@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>INTRODUCTION &mdash; DJToolkit Reference Manual Online 1.16.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="DJToolkit Reference Manual Online 1.16.0 documentation" href="index.html"/>
+        <link rel="next" title="DJToolkit 1.16" href="DJToolkit.html"/>
+        <link rel="prev" title="DJToolkit - The Manual" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DJToolkit Reference Manual Online
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.16
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#copyright-notice-and-disclaimer">COPYRIGHT NOTICE AND DISCLAIMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#questions-about-the-tool-kit">QUESTIONS ABOUT THE TOOL KIT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-a-tool-kit">WHAT IS A TOOL KIT?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#can-i-use-the-toolkit-in-my-own-programs">CAN I USE THE TOOLKIT IN MY OWN PROGRAMS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-it-work-with-other-toolkits">DOES IT WORK WITH OTHER TOOLKITS?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#brief-description-of-the-new-commands">BRIEF DESCRIPTION OF THE NEW COMMANDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qdos-error-codes">QDOS ERROR CODES</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DJToolkit.html">DJToolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UPDATES.html">Updates</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">DJToolkit Reference Manual Online</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>INTRODUCTION</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Introduction.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>INTRODUCTION<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p><strong>WRITTEN BY NORMAN DUNBAR, 1993-94</strong></p>
+<p>This toolkit has been produced at the suggestion of <em>Dilwyn Jones</em> in an effort to provide <code class="docutils literal"><span class="pre">QLiberator</span></code> users with some of the file &amp; memory handling utilities, direct file access (in internal format) &amp; positioning commands that are found in the <code class="docutils literal"><span class="pre">Turbo</span> <span class="pre">Toolkit</span></code> and <code class="docutils literal"><span class="pre">Toolkit</span> <span class="pre">2</span></code> etc. In addition, there are a few routines not (yet) found in any other toolkit.</p>
+<p>All of the procedures and functions in this toolkit can be compiled by <code class="docutils literal"><span class="pre">QLiberator</span></code>, but one of the functions, <code class="docutils literal"><span class="pre">DEV_NAME</span></code>, cannot be compiled by <code class="docutils literal"><span class="pre">Turbo</span></code> or <code class="docutils literal"><span class="pre">Supercharge</span></code> as it modifies its parameter as well as returning a string.</p>
+<p>This toolkit may be supplied as part of a commercial or shareware or public domain program which has been <code class="docutils literal"><span class="pre">QLiberator</span></code> compiled. It should be supplied <em>linked</em> to the object program, not loaded by a <code class="docutils literal"><span class="pre">BOOT</span></code> program.</p>
+<p>To link this toolkit into a <code class="docutils literal"><span class="pre">QLiberator</span></code> compiled program, use the following compiler directive somewhere near the start of the program to be compiled. The drive name is where the compiler can find the toolkit file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>110 REMark $$asmb=FLP2_DJToolkit_BIN,0,12
+</pre></div>
+</div>
+<div class="section" id="copyright-notice-and-disclaimer">
+<h2>COPYRIGHT NOTICE AND DISCLAIMER<a class="headerlink" href="#copyright-notice-and-disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>This software is Copyright © Norman Dunbar 1993-94/2013 and may be freely copied as QL free ware.</p>
+<p>You can make backup copies using whatever method you have and normally use (e.g. <code class="docutils literal"><span class="pre">WCOPY</span></code> from <code class="docutils literal"><span class="pre">Toolkit</span> <span class="pre">2</span></code>). DJToolkit is not copy protected (except by copyright law).</p>
+<p>While all reasonable care has been taken to ensure that this program and its manual are accurate and do not contain any errors, neither the author nor publisher will in any way be liable for any direct, indirect or consequential damage or loss arising from the use of, or inability to use, this software or its documentation. We reserve the right to constantly develop and improve our products.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Yeah, yeah, yeah! Since that was originally written, sometime in the early 1990&#8217;s, the world has moved on and most of the old QL programs are pretty much in the public domain, free ware or open source. As indeed, this one is!</p>
+<p class="last"><em>Norman Dunbar, December 2016</em></p>
+</div>
+</div>
+<div class="section" id="questions-about-the-tool-kit">
+<h2>QUESTIONS ABOUT THE TOOL KIT<a class="headerlink" href="#questions-about-the-tool-kit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-a-tool-kit">
+<h3>WHAT IS A TOOL KIT?<a class="headerlink" href="#what-is-a-tool-kit" title="Permalink to this headline">¶</a></h3>
+<p>A tool kit is a set of BASIC extensions, new commands and functions which add to the number of &#8220;words&#8221; understood by the QL&#8217;s BASIC language. These new extensions greatly add to the power and versatility of SuperBASIC, by adding the facility to perform new actions, or by simplifying a task which is difficult to program at the moment</p>
+</div>
+<div class="section" id="can-i-use-the-toolkit-in-my-own-programs">
+<h3>CAN I USE THE TOOLKIT IN MY OWN PROGRAMS?<a class="headerlink" href="#can-i-use-the-toolkit-in-my-own-programs" title="Permalink to this headline">¶</a></h3>
+<p>Yes, you can use these commands both in interpreted BASIC programs and compiled BASIC programs, but see the note above regarding use with Turbo.</p>
+</div>
+<div class="section" id="does-it-work-with-other-toolkits">
+<h3>DOES IT WORK WITH OTHER TOOLKITS?<a class="headerlink" href="#does-it-work-with-other-toolkits" title="Permalink to this headline">¶</a></h3>
+<p>We have tried to ensure that there is no clash, but it is impossible to test it against every other piece of software or hardware. Please let us know if you discover any incompatibilities so that we can try to sort them out.</p>
+</div>
+</div>
+<div class="section" id="brief-description-of-the-new-commands">
+<h2>BRIEF DESCRIPTION OF THE NEW COMMANDS<a class="headerlink" href="#brief-description-of-the-new-commands" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>ABS_POSITION</td>
+<td>Set file position absolute</td>
+</tr>
+<tr class="row-even"><td>BYTES_FREE</td>
+<td>How much free memory is left, in bytes</td>
+</tr>
+<tr class="row-odd"><td>CHECK</td>
+<td>Test to see if a machine code PROC/FN exists</td>
+</tr>
+<tr class="row-even"><td>DEV_NAME</td>
+<td>Scan the Directory Device list, returning the next name</td>
+</tr>
+<tr class="row-odd"><td>DISPLAY_WIDTH</td>
+<td>How many bytes are used to hold one screen line</td>
+</tr>
+<tr class="row-even"><td>DJ_OPEN</td>
+<td>Opens a file, returns error or channel id</td>
+</tr>
+<tr class="row-odd"><td>DJ_OPEN_IN</td>
+<td>Ditto, similar to OPEN_IN</td>
+</tr>
+<tr class="row-even"><td>DJ_OPEN_NEW</td>
+<td>Creates a file, returns channel id or error</td>
+</tr>
+<tr class="row-odd"><td>DJ_OPEN_OVER</td>
+<td>Overwrites a file, returns error or channel id</td>
+</tr>
+<tr class="row-even"><td>DJ_OPEN_DIR</td>
+<td>Opens a device directory for access</td>
+</tr>
+<tr class="row-odd"><td>DJTK_VER$</td>
+<td>Return the toolkit version number as a string</td>
+</tr>
+<tr class="row-even"><td>FETCH_BYTES</td>
+<td>Get some bytes from a channel</td>
+</tr>
+<tr class="row-odd"><td>FILE_BACKUP</td>
+<td>Get the backup date for a specific file</td>
+</tr>
+<tr class="row-even"><td>FILE_DATASPACE</td>
+<td>Get the file&#8217;s dataspace</td>
+</tr>
+<tr class="row-odd"><td>FILE_LENGTH</td>
+<td>Get the file&#8217;s length</td>
+</tr>
+<tr class="row-even"><td>FILE_POSITION</td>
+<td>Get the current position in the file</td>
+</tr>
+<tr class="row-odd"><td>FILE_TYPE</td>
+<td>Get the file&#8217;s type</td>
+</tr>
+<tr class="row-even"><td>FILE_UPDATE</td>
+<td>Get the file&#8217;s update date</td>
+</tr>
+<tr class="row-odd"><td>FILLMEM_B</td>
+<td>Fill memory with a byte value</td>
+</tr>
+<tr class="row-even"><td>FILLMEM_L</td>
+<td>Fill memory with a long value</td>
+</tr>
+<tr class="row-odd"><td>FILLMEM_W</td>
+<td>Fill memory with a word value</td>
+</tr>
+<tr class="row-even"><td>FLUSH_CHANNEL</td>
+<td>Flush the data on a channel to a device</td>
+</tr>
+<tr class="row-odd"><td>GET_BYTE</td>
+<td>Fetch one byte from a channel</td>
+</tr>
+<tr class="row-even"><td>GET_FLOAT</td>
+<td>Fetch 6 bytes from a channel</td>
+</tr>
+<tr class="row-odd"><td>GET_LONG</td>
+<td>Fetch 4 bytes from a channel</td>
+</tr>
+<tr class="row-even"><td>GET_STRING</td>
+<td>Fetch a QDOS string from a channel</td>
+</tr>
+<tr class="row-odd"><td>GET_WORD</td>
+<td>Fetch 2 bytes from a channel</td>
+</tr>
+<tr class="row-even"><td>KBYTES_FREE</td>
+<td>How much free memory is left in Kbytes</td>
+</tr>
+<tr class="row-odd"><td>LEVEL2</td>
+<td>Test whether level 2 drivers are present on a channel</td>
+</tr>
+<tr class="row-even"><td>MAX_CON</td>
+<td>Returns the absolute limits of a SCR or CON channel</td>
+</tr>
+<tr class="row-odd"><td>MAX_DEVS</td>
+<td>Counts the number of directory devices. See DEV_NAME</td>
+</tr>
+<tr class="row-even"><td>MOVE_MEM</td>
+<td>Move memory around</td>
+</tr>
+<tr class="row-odd"><td>MOVE_POSITION</td>
+<td>Set a file position relative to its current one</td>
+</tr>
+<tr class="row-even"><td>PEEK_FLOAT</td>
+<td>Read 6 bytes from memory into a float variable</td>
+</tr>
+<tr class="row-odd"><td>PEEK_STRING</td>
+<td>Get bytes from memory into a string</td>
+</tr>
+<tr class="row-even"><td>POKE_FLOAT</td>
+<td>pokes a floating point variable into memory</td>
+</tr>
+<tr class="row-odd"><td>POKE_STRING</td>
+<td>Store the string in memory at a given address</td>
+</tr>
+<tr class="row-even"><td>PUT_BYTE</td>
+<td>Send 1 byte to a channel</td>
+</tr>
+<tr class="row-odd"><td>PUT_FLOAT</td>
+<td>Send 6 bytes to a channel</td>
+</tr>
+<tr class="row-even"><td>PUT_LONG</td>
+<td>Send 4 bytes to a channel</td>
+</tr>
+<tr class="row-odd"><td>PUT_STRING</td>
+<td>Send a QDOS string to a channel</td>
+</tr>
+<tr class="row-even"><td>PUT_WORD</td>
+<td>Send 2 bytes to a channel</td>
+</tr>
+<tr class="row-odd"><td>QPTR</td>
+<td>Is the Pointer Environment available</td>
+</tr>
+<tr class="row-even"><td>READ_HEADER</td>
+<td>Read the header for a file into a buffer</td>
+</tr>
+<tr class="row-odd"><td>RELEASE_HEAP</td>
+<td>Remove some space allocated with RESERVE_HEAP</td>
+</tr>
+<tr class="row-even"><td>RESERVE_HEAP</td>
+<td>Get some Common Heap space for a program to use</td>
+</tr>
+<tr class="row-odd"><td>SCREEN_BASE</td>
+<td>Find out where the screen memory starts for a channel</td>
+</tr>
+<tr class="row-even"><td>SCREEN_MODE</td>
+<td>Returns the current screen mode, 4 or 8</td>
+</tr>
+<tr class="row-odd"><td>SEARCH_C</td>
+<td>Look in memory for a string, case is considered</td>
+</tr>
+<tr class="row-even"><td>SEARCH_I</td>
+<td>Ditto, but case is ignored</td>
+</tr>
+<tr class="row-odd"><td>SET_HEADER</td>
+<td>Set the header for a file</td>
+</tr>
+<tr class="row-even"><td>SET_XINC</td>
+<td>Change horizontal spacing between characters</td>
+</tr>
+<tr class="row-odd"><td>SET_YINC</td>
+<td>Change vertical spacing between lines of characters</td>
+</tr>
+<tr class="row-even"><td>SYSTEM_VARIABLES</td>
+<td>Find out where the system variables are</td>
+</tr>
+<tr class="row-odd"><td>USE_FONT</td>
+<td>Change the fonts used by a channel</td>
+</tr>
+<tr class="row-even"><td>WHERE_FONTS</td>
+<td>Find the addresses of the two fonts used on a channel</td>
+</tr>
+</tbody>
+</table>
+<p>In the following  descriptions, all parameters must be supplied as there are no defaults, in addition, when a channel number is being passed, either as a number or as a variable, it must be preceded by a hash (#).</p>
+</div>
+<div class="section" id="qdos-error-codes">
+<h2>QDOS ERROR CODES<a class="headerlink" href="#qdos-error-codes" title="Permalink to this headline">¶</a></h2>
+<p>Many of the above functions return a valid result, such as an address, or a negative error code. The QDOS error codes are listed below for reference.</p>
+<ul class="simple">
+<li>-1 Not complete</li>
+<li>-2 Invalid job</li>
+<li>-3 Out of memory</li>
+<li>-4 Out of range</li>
+<li>-5 Buffer overflow</li>
+<li>-6 Channel not open</li>
+<li>-7 Not found</li>
+<li>-8 File already exists</li>
+<li>-9 In use</li>
+<li>-10 End of file</li>
+<li>-11 Drive full</li>
+<li>-12 Bad device name</li>
+<li>-13 Xmit (transmit) error</li>
+<li>-14 Format failed</li>
+<li>-15 Bad parameter</li>
+<li>-16 File error</li>
+<li>-17 Error in expression</li>
+<li>-18 Arithmetic overflow</li>
+<li>-19 Not implemented</li>
+<li>-20 Read only</li>
+<li>-21 Bad line</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DJToolkit.html" class="btn btn-neutral float-right" title="DJToolkit 1.16" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="DJToolkit - The Manual" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright © 2016, Norman Dunbar.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.16.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

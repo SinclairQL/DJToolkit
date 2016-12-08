@@ -1,0 +1,112 @@
+
+File Name: test.txt
+
+Line 10: [something   equ something_else,and_another,"a string with spaces"]
+LABEL = 'something'
+OPCODE = 'equ'
+CHECKING: 'equ' with 'rts': No match
+CHECKING: 'equ' with 'nop': No match
+OPERAND = 'something_else,and_another,"a'
+COMMENT = 'string with spaces"'
+
+Line 13: [l1 nop]
+LABEL = 'l1'
+OPCODE = 'nop'
+CHECKING: 'nop' with 'rts': No match
+CHECKING: 'nop' with 'nop': Matched
+
+Line 14: [   rts]
+OPCODE = 'rts'
+CHECKING: 'rts' with 'rts': Matched
+
+Line 17: [this_label_is_very_long nop]
+LABEL = 'this_label_is_very_long'
+OPCODE = 'nop'
+CHECKING: 'nop' with 'rts': No match
+CHECKING: 'nop' with 'nop': Matched
+
+Line 18: [  nop]
+OPCODE = 'nop'
+CHECKING: 'nop' with 'rts': No match
+CHECKING: 'nop' with 'nop': Matched
+
+Line 19: [  nop]
+OPCODE = 'nop'
+CHECKING: 'nop' with 'rts': No match
+CHECKING: 'nop' with 'nop': Matched
+
+Line 20: [  moveq #-1,d0]
+OPCODE = 'moveq'
+CHECKING: 'moveq' with 'rts': No match
+CHECKING: 'moveq' with 'nop': No match
+OPERAND = '#-1,d0'
+
+Line 21: [  rts]
+OPCODE = 'rts'
+CHECKING: 'rts' with 'rts': Matched
+
+Line 22: [  ]
+OPCODE = ''
+CHECKING: '' with 'rts': No match
+CHECKING: '' with 'nop': No match
+OPERAND = ''
+
+Line 24: [ movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save everything!]
+OPCODE = 'movem.l'
+CHECKING: 'movem.l' with 'rts': No match
+CHECKING: 'movem.l' with 'nop': No match
+OPERAND = 'd0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)'
+COMMENT = 'Save everything!'
+
+Line 25: [ movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save it all again!]
+OPCODE = 'movem.l'
+CHECKING: 'movem.l' with 'rts': No match
+CHECKING: 'movem.l' with 'nop': No match
+OPERAND = 'd0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)'
+COMMENT = 'Save it all again!'
+
+Line 26: [ ]
+OPCODE = ''
+CHECKING: '' with 'rts': No match
+CHECKING: '' with 'nop': No match
+OPERAND = ''
+
+Line 28: [ jsr some_code_somewhere_else_in_this_file ]
+OPCODE = 'jsr'
+CHECKING: 'jsr' with 'rts': No match
+CHECKING: 'jsr' with 'nop': No match
+OPERAND = 'some_code_somewhere_else_in_this_file'
+COMMENT = ''
+
+Line 29: [ jsr some_code_somewhere_else_in_this_file ; And we have a comment here too.]
+OPCODE = 'jsr'
+CHECKING: 'jsr' with 'rts': No match
+CHECKING: 'jsr' with 'nop': No match
+OPERAND = 'some_code_somewhere_else_in_this_file'
+COMMENT = '; And we have a comment here too.'
+
+Line 30: [ ]
+OPCODE = ''
+CHECKING: '' with 'rts': No match
+CHECKING: '' with 'nop': No match
+OPERAND = ''
+
+Line 32: [This_label_is_long  jsr some_code_somewhere_else_in_this_file ; And we have a comment here too.]
+LABEL = 'This_label_is_long'
+OPCODE = 'jsr'
+CHECKING: 'jsr' with 'rts': No match
+CHECKING: 'jsr' with 'nop': No match
+OPERAND = 'some_code_somewhere_else_in_this_file'
+COMMENT = '; And we have a comment here too.'
+
+Line 33: [ ]
+OPCODE = ''
+CHECKING: '' with 'rts': No match
+CHECKING: '' with 'nop': No match
+OPERAND = ''
+
+Line 34: [ ]
+OPCODE = ''
+CHECKING: '' with 'rts': No match
+CHECKING: '' with 'nop': No match
+OPERAND = ''

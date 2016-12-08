@@ -1,0 +1,2074 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DJToolkit 1.16 &mdash; DJToolkit Reference Manual Online 1.16.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="DJToolkit Reference Manual Online 1.16.0 documentation" href="index.html"/>
+        <link rel="next" title="DJToolkit Updates" href="UPDATES.html"/>
+        <link rel="prev" title="DJToolkit - The Manual" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DJToolkit Reference Manual Online
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.16
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DJToolkit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#abs-position">ABS_POSITION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bytes-free">BYTES_FREE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check">CHECK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dev-name">DEV_NAME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#display-width">DISPLAY_WIDTH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dj-open">DJ_OPEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dj-open-in">DJ_OPEN_IN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dj-open-new">DJ_OPEN_NEW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dj-open-over">DJ_OPEN_OVER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dj-open-dir">DJ_OPEN_DIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#djtk-ver">DJTK_VER$</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fetch-bytes">FETCH_BYTES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-backup">FILE_BACKUP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-dataspace">FILE_DATASPACE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-length">FILE_LENGTH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-position">FILE_POSITION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-type">FILE_TYPE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-update">FILE_UPDATE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fillmem-b">FILLMEM_B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fillmem-w">FILLMEM_W</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fillmem-l">FILLMEM_L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flush-channel">FLUSH_CHANNEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-byte">GET_BYTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-float">GET_FLOAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-long">GET_LONG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-string">GET_STRING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-word">GET_WORD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kbytes-free">KBYTES_FREE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#level2">LEVEL2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#max-con">MAX_CON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#max-devs">MAX_DEVS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#move-mem">MOVE_MEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#move-position">MOVE_POSITION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#peek-float">PEEK_FLOAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#peek-string">PEEK_STRING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poke-float">POKE_FLOAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poke-string">POKE_STRING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#put-byte">PUT_BYTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#put-float">PUT_FLOAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#put-long">PUT_LONG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#put-string">PUT_STRING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#put-word">PUT_WORD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qptr">QPTR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-header">READ_HEADER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-heap">RELEASE_HEAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reserve-heap">RESERVE_HEAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#screen-base">SCREEN_BASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#screen-mode">SCREEN_MODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-c">SEARCH_C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-i">SEARCH_I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-header">SET_HEADER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-xinc">SET_XINC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-yinc">SET_YINC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-variables">SYSTEM_VARIABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-font">USE_FONT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#where-fonts">WHERE_FONTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UPDATES.html">Updates</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">DJToolkit Reference Manual Online</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>DJToolkit 1.16</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/DJToolkit.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="djtoolkit-1-16">
+<h1>DJToolkit 1.16<a class="headerlink" href="#djtoolkit-1-16" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="abs-position">
+<h2>ABS_POSITION<a class="headerlink" href="#abs-position" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>ABS_POSITION #channel, position</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This procedure will set the file pointer to the position given for the file attached to the given channel number. If you attempt to set the position for a screen or some other non-directory device channel, you will get a bad parameter error, as you will if position is negative.</p>
+<p>If the position given is 0, the file will be positioned to the start, if the position is a large  number which is greater than the current file size, the position will be set to the end of file and no error will occur.</p>
+<p>After an ABS_POSITION command, all file accesses will take place at the new position.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1500</span> <span class="n">REMark</span> <span class="n">Set</span> <span class="n">position</span> <span class="n">to</span> <span class="n">very</span> <span class="n">end</span><span class="p">,</span> <span class="k">for</span> <span class="n">appending</span> <span class="n">data</span>
+<span class="mi">1510</span> <span class="n">ABS_POSITION</span> <span class="c1">#3, 6e6</span>
+<span class="mi">1520</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsM.clean.html#move-position">MOVE_POSITION</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="bytes-free">
+<h2>BYTES_FREE<a class="headerlink" href="#bytes-free" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>memory = BYTESFREE</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This simple function  returns the amount of memory known by the system to be free.  The answer is returned in bytes, see also <a class="reference external" href="KeywordsK.clean.html#kbytes-free">KBYTES_FREE</a>.  For the technically  minded, the free memory is  considered  to be that  between the addresses held in the system variables SV_FREE and SV_BASIC.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="mi">2500</span> <span class="n">freeMemory</span> <span class="o">=</span> <span class="n">BYTES_FREE</span>
+<span class="mi">2510</span> <span class="n">IF</span> <span class="n">freeMemory</span> <span class="o">&lt;</span> <span class="mi">32</span> <span class="o">*</span> <span class="mi">1024</span> <span class="n">THEN</span>
+<span class="mi">2520</span>    <span class="n">REMark</span> <span class="n">Do</span> <span class="n">something</span> <span class="n">here</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">enough</span> <span class="n">memory</span> <span class="n">left</span><span class="o">...</span>
+<span class="mi">2530</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsK.clean.html#kbytes-free">KBYTES_FREE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="check">
+<h2>CHECK<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>oops = CHECK(&#8216;name&#8217;)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>If name is a currently loaded  machine code procedure or function, then the variable oops will be set to 1 otherwise it will be set to 0.  This is a handy way to check that an extension command has been loaded before calling it.  In a Turbo&#8217;d or Supercharged program, the <a class="reference external" href="KeywordsE.clean.html#exec">EXEC</a> will fail and a list of  missing extensions will be displayed, a QLiberated program will only fail if the extension is actually called.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 DEFine FuNction CheckTK2
+1010   REMark Is TK2 present?
+1020   RETurn CHECK(&#39;WTV&#39;)
+2030 END DEFine
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="dev-name">
+<h2>DEV_NAME<a class="headerlink" href="#dev-name" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>device$ = DEV_NAME(address)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function must be called with a floating point variable name as its parameter.  The first time this function is called, address <em>must</em> hold the value zero, on all other calls, simply pass address <em>unchanged</em> back.  The purpose of the function is to return a directory device name to the variable device$, an example is worth a thousand explanations.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">addr</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">1010</span> <span class="n">REPeat</span> <span class="n">loop</span>
+<span class="mi">1020</span>   <span class="n">PRINT</span> <span class="s2">&quot;&lt;&quot;</span> <span class="o">&amp;</span> <span class="n">DEV_NAME</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;&gt;&quot;</span>
+<span class="mi">1030</span>   <span class="n">IF</span> <span class="n">addr</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">THEN</span> <span class="n">EXIT</span> <span class="n">loop</span><span class="p">:</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1040</span> <span class="n">END</span> <span class="n">REPeat</span> <span class="n">loop</span>
+</pre></div>
+</div>
+<p>This small example will scan the entire directory device driver list and return one entry from it each time as well as updating the value in &#8216;addr&#8217;. The value in addr is the start of the next device driver linkage block and <em>must not be changed</em> except by the function <a class="reference external" href="KeywordsD.clean.html#dev-name">DEV_NAME</a>. If you change addr and then call <a class="reference external" href="KeywordsD.clean.html#dev-name">DEV_NAME</a> again, the results will be very unpredictable.</p>
+<p>The check for addr being zero is done as this is the value returned when the final device name has been extracted, in this case the function returns an empty string for the device.  If the test was made before the call to <a class="reference external" href="KeywordsD.clean.html#dev-name">DEV_NAME</a>, nothing would be printed as addr is zero on entry to the loop.</p>
+<p>Please note, every QL has at least one device in the list, the &#8216;MDV&#8217; device and some also have a device with no name as you will see if you run the above example (not the last one as it is always an empty string when addr becomes zero).</p>
+<p>The above example will only show directory  devices, those that can have DIR used on them, or <a class="reference external" href="KeywordsF.clean.html#format">FORMAT</a> etc, such as WIN, RAM, FLP, FDK etc, however, it cannot show the  non-directory  devices such as SER, PAR (or NUL if you have Lightning), as these are in another list held in the QL.</p>
+<p><strong>Note</strong></p>
+<p>From version 1.14 of DJToolkit onwards, there is a function that counts the number of directory devices present in the QL. See <a class="reference external" href="KeywordsM.clean.html#max-devs">MAX_DEVS</a> for details.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsM.clean.html#max-devs">MAX_DEVS</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="display-width">
+<h2>DISPLAY_WIDTH<a class="headerlink" href="#display-width" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>bytes_in_a_line = DISPLAY_WIDTH</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function can be used to determine how many bytes of the QL&#8217;s memory are used to hold the data in one line of pixels on the screen. Note that the value returned has nothing to do with any <em>window</em> width, it always refers to the total <em>screen</em> display width.</p>
+<p>Why include this function I hear you think? If you run an ordinary QL, then the result will probably always be 128 as this is how many bytes are used to hold a line of pixels, however, many people use Atari ST/QLs, QXL etc and these have a number of other screen modes for which 128 bytes is not enough.</p>
+<p>This function will return the exact number of bytes required to step from one line of pixels to the next. Never assume that QDOS programs will only ever be run on a QL. What will happen when new Graphics hardware or emulators arrive? This function will still work, assuming that the unit uses standard QDOS channel definition blocks etc.</p>
+<p>For the technically minded, the word at offset $64 in the SCR_ or CON_ channel&#8217;s definition block is returned. This is called SD_LINEL in &#8216;Tebby Speak&#8217; and is mentioned in Jochen Merz&#8217;s <em>QDOS Reference Manual</em> and the <em>QL Technical Manual</em> by Tony Tebby et al. Andrew Pennel&#8217;s book, the <em>QDOS Companion</em> gets it wrong on page 61, guess which one I used first!</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="dj-open">
+<h2>DJ_OPEN<a class="headerlink" href="#dj-open" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>channel = DJ_OPEN(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Open an existing file for exclusive use. See <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a> below for details and examples.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsD.clean.html#dj-open-in">DJ_OPEN_IN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-new">DJ_OPEN_NEW</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-over">DJ_OPEN_OVER</a>, and <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="dj-open-in">
+<h2>DJ_OPEN_IN<a class="headerlink" href="#dj-open-in" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>channel = DJ_OPEN_IN(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Open an existing file for shared use. The same file can be opened by other applications running at the same time. Provided they have a compatible non-exclusive OPEN mode. See <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a> below for details and examples.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsD.clean.html#dj-open">DJ_OPEN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-new">DJ_OPEN_NEW</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-over">DJ_OPEN_OVER</a>, and <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="dj-open-new">
+<h2>DJ_OPEN_NEW<a class="headerlink" href="#dj-open-new" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>channel = DJ_OPEN_NEW(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Create a new file for exclusive use. See <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a> below for details and examples.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsD.clean.html#dj-open">DJ_OPEN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-in">DJ_OPEN_IN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-over">DJ_OPEN_OVER</a>, and <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="dj-open-over">
+<h2>DJ_OPEN_OVER<a class="headerlink" href="#dj-open-over" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>channel = DJ_OPEN_OVER(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Open existing file but overwrite all the contents. See <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a> below for details and examples.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsD.clean.html#dj-open">DJ_OPEN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-in">DJ_OPEN_IN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-new">DJ_OPEN_NEW</a>, and <a class="reference external" href="KeywordsD.clean.html#dj-open-dir">DJ_OPEN_DIR</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="dj-open-dir">
+<h2>DJ_OPEN_DIR<a class="headerlink" href="#dj-open-dir" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>channel = DJ_OPEN_DIR(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>All of these DJ_OPEN functions return the SuperBasic channel number if the channel was opened without any problems, or, a negative error code otherwise. You can use this to check whether the open was successful or not.</p>
+<p>The filename must be supplied as a variable name, file$ for example, or in quotes, &#8216;flp1_fred_dat&#8217;.</p>
+<p>They all work in a similar manner to the normmal SuperBasic OPEN procedures, but, DJ_OPEN_DIR offers a new function not normally found on a standard QL.</p>
+<p><strong>DJToolkit Author&#8217;s Note</strong></p>
+<p>I am grateful to Simon N. Goodwin for his timely article in <em>QL WORLD volume 2, issue 8</em> (marked Vol 2, issue 7!!!). I had been toying with these routines for a while and was aware of the undocumented QDOS routines to extend the SuperBasic channel table. I was, however, not able to get my routines to work properly. Simon&#8217;s article was a great help and these functions are based on that article. Thanks Simon.</p>
+<p><strong>EXAMPLE</strong></p>
+<p>The OPEN routines work as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">REMark</span> <span class="nb">open</span> <span class="n">our</span> <span class="n">file</span> <span class="k">for</span> <span class="nb">input</span>
+<span class="mi">1010</span> <span class="p">:</span>
+<span class="mi">1020</span> <span class="n">chan</span> <span class="o">=</span> <span class="n">DJ_OPEN_IN</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">)</span>
+<span class="mi">1030</span> <span class="n">IF</span> <span class="n">chan</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="mi">1040</span>    <span class="n">PRINT</span> <span class="s1">&#39;OOPS, failed to open &quot;filename&quot;, error &#39;</span> <span class="o">&amp;</span> <span class="n">chan</span>
+<span class="mi">1050</span>    <span class="n">STOP</span>
+<span class="mi">1060</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1070</span> <span class="p">:</span>
+<span class="mi">1080</span> <span class="n">REM</span> <span class="n">process</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">file</span> <span class="n">here</span> <span class="o">....</span>
+</pre></div>
+</div>
+<p>DJ_OPEN_DIR is a new function to those in the normal QL range, and it works as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 REMark read a directory
+1010 :
+1020 INPUT &#39;Which device &#39;;dev$
+1030 chan = DJ_OPEN_DIR(dev$)
+1040 IF chan &lt; 0
+1050    PRINT &#39;Cannot open &#39; &amp; dev$ &amp; &#39;, error &#39; &amp; chan
+1060    STOP
+1070 END IF
+1080 :
+1090 CLS
+1100 REPeat dir_loop
+1110   IF EOF(#chan) THEN EXIT dir_loop
+1120   a$ = FETCH_BYTES(#chan, 64)
+1130   size = CODE(a$(16)):       REMark Size of file name
+1140   PRINT a$(17 TO 16 + size): REMark file name
+1150 END REPeat dir_loop
+1160 :
+1170 CLOSE #chan
+1180 STOP
+</pre></div>
+</div>
+<p>In this example, no checks are done to ensure that the device actually exists, etc. You could use <a class="reference external" href="KeywordsD.clean.html#dev-name">DEV_NAME</a> to check if it is a legal device. The data being read from a device directory file must always be read in 64 byte chunks as per this example.</p>
+<p>Each chunk is a single directory entry which holds a copy of the file header for the appropriate file. Note, that the first 4 bytes of a file header hold the actual length of the file but when read from the directory as above, the value if 64 bytes too high as it includes the length of the file header as part of the length of a file.</p>
+<p>The above routine will also print blank lines if a file has been deleted from the directory at some point. Deleted files have a name length of zero.</p>
+<p>Note that if you type in a filename instead of a device name, the function will cope. For example, you type in &#8216;flp1_fred&#8217; instead of &#8216;flp1_&#8217;. You will get a list of the files on &#8216;flp1_&#8217; if &#8216;fred&#8217; is a file, or even, if &#8216;fred&#8217; is not on &#8216;flp1_&#8217;. If, however, you have the LEVEL 2 drivers (see <a class="reference external" href="KeywordsL.clean.html#level2">LEVEL2</a> below), and &#8216;fred&#8217; is a sub-directory then you will get a listing of the sub-directory as requested.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsD.clean.html#dj-open">DJ_OPEN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-in">DJ_OPEN_IN</a>, <a class="reference external" href="KeywordsD.clean.html#dj-open-new">DJ_OPEN_NEW</a>, and <a class="reference external" href="KeywordsD.clean.html#dj-open-over">DJ_OPEN_OVER</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="djtk-ver">
+<h2>DJTK_VER$<a class="headerlink" href="#djtk-ver" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>v$ = DJTK_VER$</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This simply sets v$ to be the 4 character string  &#8216;n.nn&#8217;  where this gives the version number of the current toolkit. If you have problems, always quote this number when requesting help.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>PRINT DJTK_VER$
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="fetch-bytes">
+<h2>FETCH_BYTES<a class="headerlink" href="#fetch-bytes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>a$ = FETCH_BYTES(#channel, how_many)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function  returns the requested  number of bytes from the given channel which must have been opened for INPUT or INPUT/OUTPUT.  It will work on CON_ channels as well, but no cursor is shown and the characters typed in are not shown on the screen.  If there is an ENTER character, or a CHR$(10), it will not signal the end of input.  The function will not return until the appropriate number of bytes have been read.</p>
+<p>WARNING - JM and AH ROMS will cause a &#8216;Buffer overflow&#8217; error if more than 128 bytes are fetched, this is a fault with QDOS and not with DJToolkit. See the demos file, supplied with DJToolkit, for a workaround to this problem.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>LineOfBytes$ = FETCH_BYTES(#4, 256)
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-backup">
+<h2>FILE_BACKUP<a class="headerlink" href="#file-backup" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>bk = FILE_BACKUP(#channel)</td>
+</tr>
+<tr class="row-even"><td>Syntax</td>
+<td>bk = FILE_BACKUP(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function reads the backup date from the file header and returns it into the variable bk.  The parameter can either be a channel number for an open channel, or it can be the filename (in quotes) of a closed file.  If the returned value is negative, it is a normal QDOS error code.  If the value returned is positve, it can be  converted to a string be calling DATE$(bk). In normal use, a files backup date is never set by QDOS, however, users who have WinBack or a similar backup utility program will see proper backup dates if the file has been backed up.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 bk = FILE_BACKUP(&#39;flp1_boot&#39;)
+1010 IF bk &lt;&gt; 0 THEN
+1020    PRINT &quot;Flp1_boot was last backed up on &quot; &amp; DATE$(bk)
+1030 ELSE
+1040    PRINT &quot;Flp1_boot doesn&#39;t appear to have been backed up yet.&quot;
+1050 END IF
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#file-dataspace">FILE_DATASPACE</a>, <a class="reference external" href="KeywordsF.clean.html#file-length">FILE_LENGTH</a>, <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>, <a class="reference external" href="KeywordsF.clean.html#file-update">FILE_UPDATE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-dataspace">
+<h2>FILE_DATASPACE<a class="headerlink" href="#file-dataspace" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>ds = FILE_DATASPACE(#channel)</td>
+</tr>
+<tr class="row-even"><td>Syntax</td>
+<td>ds = FILE_DATASPACE(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns the current dataspace requirements for the file opened as #channel or for the file which has the name given, in quotes, as filename.  If the file is an EXEC&#8217;able file (See <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>) then the value returned will be the amount of dataspace that that program requires to run, if the file is not an EXEC&#8217;able file, the result is undefined, meaningless and probably zero.  If the result is negative, there has been an error and the QDOS error code has been returned.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">FILE_DATASPACE</span><span class="p">(</span><span class="s1">&#39;flp1_WinBack_exe&#39;</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">ds</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="n">THEN</span>
+<span class="mi">1020</span>    <span class="n">PRINT</span> <span class="s2">&quot;WinBack_exe doesn&#39;t appear to exist on flp1_, or is not executable.&quot;</span>
+<span class="mi">1030</span> <span class="n">ELSE</span>
+<span class="mi">1040</span>    <span class="n">PRINT</span> <span class="s2">&quot;WinBack_exe&#39;s dataspace is set to &quot;</span> <span class="o">&amp;</span> <span class="n">ds</span> <span class="o">&amp;</span> <span class="s2">&quot; bytes.&quot;</span>
+<span class="mi">1050</span> <span class="n">END</span> <span class="n">IF</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#file-backup">FILE_BACKUP</a>, <a class="reference external" href="KeywordsF.clean.html#file-length">FILE_LENGTH</a>, <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>, <a class="reference external" href="KeywordsF.clean.html#file-update">FILE_UPDATE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-length">
+<h2>FILE_LENGTH<a class="headerlink" href="#file-length" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>fl = FILE_LENGTH(#channel)</td>
+</tr>
+<tr class="row-even"><td>Syntax</td>
+<td>fl = FILE_LENGTH(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The file length is returned. The file may be open, in which case simply supply the channel number, or closed, supply the filename in quotes. If the returned value is negative, then it is a QDOS error code.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">fl</span> <span class="o">=</span> <span class="n">FILE_LENGTH</span><span class="p">(</span><span class="s1">&#39;flp1_WinBack_exe&#39;</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">fl</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="n">THEN</span>
+<span class="mi">1020</span>    <span class="n">PRINT</span> <span class="s2">&quot;Error checking FILE_LENGTH: &quot;</span> <span class="o">&amp;</span> <span class="n">fl</span>
+<span class="mi">1030</span> <span class="n">ELSE</span>
+<span class="mi">1040</span>    <span class="n">PRINT</span> <span class="s2">&quot;WinBack_exe&#39;s file size is &quot;</span> <span class="o">&amp;</span> <span class="n">fl</span> <span class="o">&amp;</span> <span class="s2">&quot; bytes.&quot;</span>
+<span class="mi">1050</span> <span class="n">END</span> <span class="n">IF</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#file-backup">FILE_BACKUP</a>, <a class="reference external" href="KeywordsF.clean.html#file-dataspace">FILE_DATASPACE</a>, <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>, <a class="reference external" href="KeywordsF.clean.html#file-update">FILE_UPDATE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-position">
+<h2>FILE_POSITION<a class="headerlink" href="#file-position" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>where = FILE_POSITION(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function will tell you exactly where you are in the file that has been opened, to a directory device, as #channel, if the result returned is negative it is a QDOS error code.  If the file has just been opened, the result will be zero, if the file is at the very end, the result will be the same as calling FILE_LENGTH(#channel) - 1, files start at byte zero remember.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1500 DEFine FuNction OPEN_APPEND(f$)
+1510   LOCal ch, fp
+1515   :
+1520   REMark Open a file at the end, ready for additional
+1530   REMark data to be appended.
+1540   REMark Returns the channel number. (Or error)
+1545   :
+1550   ch = DJ_OPEN(f$)
+1560   IF ch &lt; 0 THEN
+1570      PRINT &quot;Error: &quot; &amp; ch &amp; &quot; Opening file: &quot; &amp; f$
+1580      RETurn ch
+1590   END IF
+1595   :
+1600   MOVE_POSITION #ch, 6e6
+1610   fp = FILE_POSITION(#ch)
+1620   IF fp &lt; 0 THEN
+1630      PRINT &quot;Error: &quot; &amp; fp &amp; &quot; reading file position on: &quot; &amp; f$
+1640      CLOSE #ch
+1650      RETurn fp
+1660   END IF
+1665   :
+1670   PRINT &quot;File position set to EOF at: &quot; &amp; fp &amp; &quot; on file: &quot; &amp;f$
+1680   RETurn ch
+1690 END DEFine
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsA.clean.html#abs-position">ABS_POSITION</a>, <a class="reference external" href="KeywordsM.clean.html#move-position">MOVE_POSITION</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-type">
+<h2>FILE_TYPE<a class="headerlink" href="#file-type" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>ft = FILE_TYPE(#channel)</td>
+</tr>
+<tr class="row-even"><td>Syntax</td>
+<td>ft = FILE_TYPE(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns the files type byte. The various types currently known to me are :</p>
+<ul class="simple">
+<li>0 = BASIC, CALL&#8217;able machine code, an extensions file or a DATA file.</li>
+<li>1 = EXEC&#8217;able file.</li>
+<li>2 = SROFF file used by linkers etc, a C68 Library file etc.</li>
+<li>3 = THOR hard disc directory file. (I think!)</li>
+<li>4 = A font file in The Painter</li>
+<li>5 = A pattern file in The Painter</li>
+<li>6 = A compressed MODE 4 screen in The Painter</li>
+<li>11 = A compressed MODE 8 screen in The Painter</li>
+<li>255 = Level 2 driver directory or sub-directory file, Miracle hard disc directory file.</li>
+</ul>
+<p>There <em>may</em> be others.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">ft</span> <span class="o">=</span> <span class="n">FILE_TYPE</span><span class="p">(</span><span class="s1">&#39;flp1_boot&#39;</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">ft</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="n">THEN</span>
+<span class="mi">1020</span>    <span class="n">PRINT</span> <span class="s2">&quot;Error checking FILE_TYPE: &quot;</span> <span class="o">&amp;</span> <span class="n">ft</span>
+<span class="mi">1030</span> <span class="n">ELSE</span>
+<span class="mi">1040</span>    <span class="n">PRINT</span> <span class="s2">&quot;Flp1_boot&#39;s file type is &quot;</span> <span class="o">&amp;</span> <span class="n">ft</span> <span class="o">&amp;</span> <span class="s2">&quot;.&quot;</span>
+<span class="mi">1050</span> <span class="n">END</span> <span class="n">IF</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#file-backup">FILE_BACKUP</a>, <a class="reference external" href="KeywordsF.clean.html#file-dataspace">FILE_DATASPACE</a>, <a class="reference external" href="KeywordsF.clean.html#file-length">FILE_LENGTH</a>, <a class="reference external" href="KeywordsF.clean.html#file-update">FILE_UPDATE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="file-update">
+<h2>FILE_UPDATE<a class="headerlink" href="#file-update" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>fu = FILE_UPDATE(#channel)</td>
+</tr>
+<tr class="row-even"><td>Syntax</td>
+<td>fu = FILE_UPDATE(&#8216;filename&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function  returns the date that the appropriate  file was last updated, either by printing to it, saving it or editing it using an editor etc.  This date is set in all known QLs and emulators etc.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 fu = FILE_UPDATE(&#39;flp1_boot&#39;)
+1010 IF fu &lt;&gt; 0 THEN
+1020    PRINT &quot;Flp1_boot was last written/saved/updated on &quot; &amp; DATE$(fu)
+1030 ELSE
+1040    PRINT &quot;Cannot read lates UPDATE date from flp1_boot. Error: &quot; &amp; fu &amp; &quot;.&quot;
+1050 END IF
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#file-dataspace">FILE_DATASPACE</a>, <a class="reference external" href="KeywordsF.clean.html#file-length">FILE_LENGTH</a>, <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>, <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="fillmem-b">
+<h2>FILLMEM_B<a class="headerlink" href="#fillmem-b" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>FILLMEM_B start_address, how_many, value</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Fill memory with a byte value. See <a class="reference external" href="KeywordsF.clean.html#fillmem-l">FILLMEM_L</a> below.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#fillmem-l">FILLMEM_L</a>, <a class="reference external" href="KeywordsF.clean.html#fillmem-w">FILLMEM_W</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="fillmem-w">
+<h2>FILLMEM_W<a class="headerlink" href="#fillmem-w" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>FILLMEM_W start_address, how_many, value</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Fill memory with a 16 bit word value . See <a class="reference external" href="KeywordsF.clean.html#fillmem-l">FILLMEM_L</a> below.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#fillmem-l">FILLMEM_L</a>, <a class="reference external" href="KeywordsF.clean.html#fillmem-b">FILLMEM_B</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="fillmem-l">
+<h2>FILLMEM_L<a class="headerlink" href="#fillmem-l" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>FILLMEM_L start_address, how_many, value</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Fill memory with a long (32 bit) value.</p>
+<p><strong>EXAMPLE</strong></p>
+<p>The screen memory is 32 kilobytes long. To fill it all black, try this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">FILLMEM_B</span> <span class="n">SCREEN_BASE</span><span class="p">(</span><span class="c1">#0), 32 * 1024, 0</span>
+</pre></div>
+</div>
+<p>or this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1010</span> <span class="n">FILLMEM_W</span> <span class="n">SCREEN_BASE</span><span class="p">(</span><span class="c1">#0), 16 * 1024, 0</span>
+</pre></div>
+</div>
+<p>or this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1020</span> <span class="n">FILLMEM_L</span> <span class="n">SCREEN_BASE</span><span class="p">(</span><span class="c1">#0), 8 * 1024, 0</span>
+</pre></div>
+</div>
+<p>and the screen will change to all black. Note how the second parameter is halved each time? This is because there are half as many words as bytes and half as many longs as words.</p>
+<p>The fastest is FILLMEM_L and the slowest is <a class="reference external" href="KeywordsF.clean.html#fillmem-b">FILLMEM_B</a>. When you use <a class="reference external" href="KeywordsF.clean.html#fillmem-w">FILLMEM_W</a> or FILLMEM_L you must make sure that the start_address is even or you will get a bad parameter error. <a class="reference external" href="KeywordsF.clean.html#fillmem-b">FILLMEM_B</a> does not care about its start_address being even or not.</p>
+<p><a class="reference external" href="KeywordsF.clean.html#fillmem-b">FILLMEM_B</a> truncates the value to the lowest 8 bits, <a class="reference external" href="KeywordsF.clean.html#fillmem-w">FILLMEM_W</a> to the lowest 16 bits and FILLMEM_L uses the lowest 32 bits of the value. Note that some values may be treated as negatives when <a class="reference external" href="KeywordsP.clean.html#peek">PEEK</a>&#8216;d back from memory. This is due to the QL treating words and long words as signed numbers.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsF.clean.html#fillmem-b">FILLMEM_B</a>, <a class="reference external" href="KeywordsF.clean.html#fillmem-w">FILLMEM_W</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="flush-channel">
+<h2>FLUSH_CHANNEL<a class="headerlink" href="#flush-channel" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>FLUSH_CHANNEL #channel</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This procedure  makes sure that all data written to the given channel number has been &#8216;flushed&#8217; out to the appropriate device. This means that if a power cut occurs, then no data will be lost.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">DEFine</span> <span class="n">PROCedure</span> <span class="n">SaveSettings</span>
+<span class="mi">1010</span>   <span class="n">OPEN_OVER</span> <span class="c1">#3, &quot;flp1_settings.cfg&quot;</span>
+<span class="mi">1020</span>   <span class="n">FOR</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span>
+<span class="mi">1030</span>     <span class="n">PRINT</span> <span class="c1">#3, Setting$(x), Value$(x)</span>
+<span class="mi">1040</span>   <span class="n">END</span> <span class="n">FOR</span> <span class="n">x</span>
+<span class="mi">1050</span>   <span class="n">FLUSH_CHANNEL</span> <span class="c1">#3</span>
+<span class="mi">1060</span>   <span class="n">CLOSE</span> <span class="c1">#3</span>
+<span class="mi">1070</span> <span class="n">END</span> <span class="n">DEFine</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="get-byte">
+<h2>GET_BYTE<a class="headerlink" href="#get-byte" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>byte = GET_BYTE(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Reads one character  from the file attached to the channel  number given and returns it as a value between 0 and 255.  This is equivalent to CODE(INKEY$(#channel)).</p>
+<p>BEWARE, <a class="reference external" href="KeywordsP.clean.html#put-byte">PUT_BYTE</a> can put negative values to file, for example -1 is put as 255, GET_BYTE will return 255 instead of -1. Any negative numbers returned are always error codes.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">GET_BYTE</span><span class="p">(</span><span class="c1">#3)</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsG.clean.html#get-float">GET_FLOAT</a>, <a class="reference external" href="KeywordsG.clean.html#get-long">GET_LONG</a>, <a class="reference external" href="KeywordsG.clean.html#get-string">GET_STRING</a>, <a class="reference external" href="KeywordsG.clean.html#get-word">GET_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="get-float">
+<h2>GET_FLOAT<a class="headerlink" href="#get-float" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>float = GET_FLOAT(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Reads 6 bytes from the file and returns them as a floating point value.</p>
+<p>BEWARE, if any errors occur, the value returned will be a negative QDOS error code. As GET_FLOAT does return negative values, it is difficult to determine whether that returned value is an error code or not. If the returned value is -10, for example, it could actually mean End Of File, this is about the only error code that can be (relatively) safely tested for.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="n">GET_FLOAT</span><span class="p">(</span><span class="c1">#3)</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsG.clean.html#get-byte">GET_BYTE</a>, <a class="reference external" href="KeywordsG.clean.html#get-long">GET_LONG</a>, <a class="reference external" href="KeywordsG.clean.html#get-string">GET_STRING</a>, <a class="reference external" href="KeywordsG.clean.html#get-word">GET_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="get-long">
+<h2>GET_LONG<a class="headerlink" href="#get-long" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>long = GET_LONG(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Read the next 4 bytes  from the file and return  them as a number  between 0 and 2^32 -1 (4,294,967,295 or HEX FFFFFFFF unsigned).</p>
+<p>BEWARE, the same problem with negatives &amp; error codes applies here as well as <a class="reference external" href="KeywordsG.clean.html#get-float">GET_FLOAT</a>.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lv</span> <span class="o">=</span> <span class="n">GET_LONG</span><span class="p">(</span><span class="c1">#3)</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsG.clean.html#get-byte">GET_BYTE</a>, <a class="reference external" href="KeywordsG.clean.html#get-float">GET_FLOAT</a>, <a class="reference external" href="KeywordsG.clean.html#get-string">GET_STRING</a>, <a class="reference external" href="KeywordsG.clean.html#get-word">GET_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="get-string">
+<h2>GET_STRING<a class="headerlink" href="#get-string" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>a$ = GET_STRING(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>Read the next 2 bytes from the file and assuming them to be a QDOS string&#8217;s length, read that many characters into a$.  The two bytes holding the string&#8217;s length are NOT returned in a$, only the data bytes.</p>
+<p>The subtle difference between this function and <a class="reference external" href="KeywordsF.clean.html#fetch-bytes">FETCH_BYTES</a> is that this one finds out how many bytes to return from the channel given, <a class="reference external" href="KeywordsF.clean.html#fetch-bytes">FETCH_BYTES</a> needs to be told how many to return by the  user. GET_STRING is the same as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">FETCH_BYTES</span><span class="p">(</span><span class="c1">#channel, GET_WORD(#channel))</span>
+</pre></div>
+</div>
+<p>WARNING - JM and AH ROMS will give a &#8216;Buffer overflow&#8217; error if the length of the returned string is more than 128 bytes. This is a fault in QDOS, not DJToolkit. The demos file, supplied with DJToolkit, has a &#8216;fix&#8217; for this problem.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>b$ = GET_STRING(#3)
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsG.clean.html#get-byte">GET_BYTE</a>, <a class="reference external" href="KeywordsG.clean.html#get-float">GET_FLOAT</a>, <a class="reference external" href="KeywordsG.clean.html#get-long">GET_LONG</a>, <a class="reference external" href="KeywordsG.clean.html#get-word">GET_WORD</a>, <a class="reference external" href="KeywordsF.clean.html#fetch-bytes">FETCH_BYTES</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="get-word">
+<h2>GET_WORD<a class="headerlink" href="#get-word" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>word = GET_WORD(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The next two bytes are read from the appropriate file and returned as an integer value.  This is equivalent to CODE(INKEY$(#channel)) * 256 + CODE(INKEY$(#channel)). See the caution above for <a class="reference external" href="KeywordsG.clean.html#get-byte">GET_BYTE</a> as it applies here as well. Any negative numbers returned will always be an error code.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">GET_WORD</span><span class="p">(</span><span class="c1">#3)</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsG.clean.html#get-byte">GET_BYTE</a>, <a class="reference external" href="KeywordsG.clean.html#get-float">GET_FLOAT</a>, <a class="reference external" href="KeywordsG.clean.html#get-long">GET_LONG</a>, <a class="reference external" href="KeywordsG.clean.html#get-string">GET_STRING</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="kbytes-free">
+<h2>KBYTES_FREE<a class="headerlink" href="#kbytes-free" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>memory = KBYTES_FREE</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The amount of memory considered by QDOS to be free is returned rounded down to the nearest kilo byte.  See also <a class="reference external" href="KeywordsB.clean.html#bytes-free">BYTES_FREE</a> if you need the answer in bytes.  The value in KBYTES_FREE may not be equal to <a class="reference external" href="KeywordsB.clean.html#bytes-free">BYTES_FREE</a>/1024 as the value returned by KBYTES_FREE has been rounded down.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">kb_available</span> <span class="o">=</span> <span class="n">KBYTES_FREE</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsB.clean.html#bytes-free">BYTES_FREE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="level2">
+<h2>LEVEL2<a class="headerlink" href="#level2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>present = LEVEL2(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>If the device that has the given channel opened to it has the level 2 drivers, then present will be set to 1, otherwise it will be set to 0.  The level 2 drivers allow such things as sub_directories to be used, when a <a class="reference external" href="KeywordsD.clean.html#dir">DIR</a> is done on one of these devices, sub-directories show up as a filename with &#8216;-&gt;&#8217; at the end of the name. Gold Cards and later models of Trump cards have level 2 drivers. Microdrives don&#8217;t.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>2500 DEFine PROCedure MAKE_DIRECTORY
+2510   LOCal d$, t$, l2_ok, ch
+2520   INPUT &#39;Enter drive names :&#39;;d$
+2530   IF d$(LEN(d$)) &lt;&gt; &#39;_&#39; THEN d$ = d$ &amp; &#39;_&#39;: END IF
+2540   PRINT &#39;Please wait, checking ...&#39;
+2550   ch = DJ_OPEN_OVER (d$ &amp; CHR$(0) &amp; CHR$(0))
+2560   IF ch &lt; 0: PRINT &#39;Cannot open file on &#39; &amp; d$ &amp; &#39;, error: &#39; &amp; ch: RETurn
+2570   l2_ok = LEVEL2(#ch)
+2580   CLOSE #ch
+2590   DELETE d$ &amp; CHR$(0) &amp; CHR$(0)
+2600   IF l2_ok
+2610     INPUT &#39;Enter directory name please : &#39;;t$
+2620     MAKE_DIR d$ &amp; t$
+2630   ELSE
+2640     PRINT &#39;Sorry, no level 2 drivers!&#39;
+2650   END IF
+2660 END DEFine MAKE_DIRECTORY
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="max-con">
+<h2>MAX_CON<a class="headerlink" href="#max-con" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>error = MAX_CON(#channel%, x%, y%, xo%, yo%)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>If the given channel is a &#8216;CON_&#8217; channel, this function will return a zero in the variable &#8216;error&#8217;. The integer variables, &#8216;x%&#8217;, &#8216;y%&#8217;, &#8216;xo%&#8217; and &#8216;yo%&#8217; will be altered by the function, to return the maximum size that the channel can be <a class="reference external" href="KeywordsW.clean.html#window">WINDOW</a>&#8216;d to.</p>
+<p>&#8216;x%&#8217; will be set to the maximum width, &#8216;y%&#8217; to the maximum depth, &#8216;xo%&#8217; and &#8216;yo%&#8217; to the minimum x co-ordinate and y co-ordinate respectively.</p>
+<p>For the technically minded reader, this function uses the IOP_FLIM routine in the pointer Environment code, if present. If it is not present, you should get the -15 error code returned. (BAD PARAMETER).</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">7080</span> <span class="n">DEFine</span> <span class="n">PROCedure</span> <span class="n">SCREEN_SIZES</span>
+<span class="mi">7090</span>   <span class="n">LOCal</span> <span class="n">w</span><span class="o">%</span><span class="p">,</span><span class="n">h</span><span class="o">%</span><span class="p">,</span><span class="n">x</span><span class="o">%</span><span class="p">,</span><span class="n">y</span><span class="o">%</span><span class="p">,</span><span class="n">fer</span>
+<span class="mi">7100</span>   <span class="n">REMark</span> <span class="n">how</span> <span class="n">to</span> <span class="n">work</span> <span class="n">out</span> <span class="n">maximum</span> <span class="n">size</span> <span class="n">of</span> <span class="n">windows</span> <span class="n">using</span> <span class="n">iop</span><span class="o">.</span><span class="n">flim</span>
+<span class="mi">7110</span>   <span class="n">REMark</span> <span class="n">using</span> <span class="n">MAX_CON</span> <span class="n">on</span> <span class="n">primary</span> <span class="n">channel</span> <span class="n">returns</span> <span class="n">screen</span> <span class="n">size</span>
+<span class="mi">7120</span>   <span class="n">REMark</span> <span class="n">secondaries</span> <span class="k">return</span> <span class="n">maximum</span> <span class="n">sizes</span> <span class="n">within</span> <span class="n">outline</span> <span class="n">where</span>
+<span class="mi">7130</span>   <span class="n">REMark</span> <span class="n">pointer</span> <span class="n">environment</span> <span class="ow">is</span> <span class="n">used</span><span class="o">.</span>
+<span class="mi">7140</span>   <span class="n">w</span><span class="o">%</span> <span class="o">=</span> <span class="mi">512</span> <span class="p">:</span> <span class="n">REMark</span> <span class="n">width</span> <span class="n">of</span> <span class="n">standard</span> <span class="n">QL</span> <span class="n">screen</span>
+<span class="mi">7150</span>   <span class="n">h</span><span class="o">%</span> <span class="o">=</span> <span class="mi">256</span> <span class="p">:</span> <span class="n">REMark</span> <span class="n">height</span> <span class="n">of</span> <span class="n">standard</span> <span class="n">QL</span> <span class="n">screen</span>
+<span class="mi">7160</span>   <span class="n">x</span><span class="o">%</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">7170</span>   <span class="n">y</span><span class="o">%</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">7180</span>   <span class="p">:</span>
+<span class="mi">7190</span>   <span class="n">fer</span> <span class="o">=</span> <span class="n">MAX_CON</span><span class="p">(</span><span class="c1">#0,w%,h%,x%,y%) : REMark primary for basic</span>
+<span class="mi">7200</span>   <span class="n">IF</span> <span class="n">fer</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">PRINT</span> <span class="c1">#0,&#39;Error &#39;;fer : RETurn</span>
+<span class="mi">7210</span>   <span class="n">PRINT</span><span class="s1">&#39;#0 : &#39;</span><span class="p">;</span><span class="n">w</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">h</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">x</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">y</span><span class="o">%</span>
+<span class="mi">7220</span>   <span class="p">:</span>
+<span class="mi">7230</span>   <span class="n">fer</span> <span class="o">=</span> <span class="n">MAX_CON</span><span class="p">(</span><span class="c1">#1,w%,h%,x%,y%) : REMark primary for basic</span>
+<span class="mi">7240</span>   <span class="n">IF</span> <span class="n">fer</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">PRINT</span> <span class="c1">#0,&#39;Error &#39;;fer : RETurn</span>
+<span class="mi">7250</span>   <span class="n">PRINT</span><span class="s1">&#39;#1 : &#39;</span><span class="p">;</span><span class="n">w</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">h</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">x</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">y</span><span class="o">%</span>
+<span class="mi">7260</span>   <span class="p">:</span>
+<span class="mi">7270</span>   <span class="n">fer</span> <span class="o">=</span> <span class="n">MAX_CON</span><span class="p">(</span><span class="c1">#2,w%,h%,x%,y%) : REMark primary for basic</span>
+<span class="mi">7280</span>   <span class="n">IF</span> <span class="n">fer</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">PRINT</span> <span class="c1">#0,&#39;Error &#39;;fer : RETurn</span>
+<span class="mi">7290</span>   <span class="n">PRINT</span><span class="s1">&#39;#2 : &#39;</span><span class="p">;</span><span class="n">w</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">h</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">x</span><span class="o">%</span><span class="p">;</span><span class="s1">&#39;,&#39;</span><span class="p">;</span><span class="n">y</span><span class="o">%</span>
+<span class="mi">7300</span> <span class="n">END</span> <span class="n">DEFine</span> <span class="n">SCREEN_SIZES</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="max-devs">
+<h2>MAX_DEVS<a class="headerlink" href="#max-devs" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>how_many = MAX_DEVS</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns the number of installed directory device drivers in your QL. It can be used to <a class="reference external" href="KeywordsD.clean.html#dim">DIM</a>ension a string array to hold the device names as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 REMark Count directory devices
+1010 :
+1020 how_many = MAX_DEVS
+1030 :
+1040 REMark Set up array
+1050 :
+1060 DIM device$(how_many, 10)
+1070 :
+1080 REMark Now get device names
+1090 addr = 0
+1100 FOR devs = 1 to how_many
+1110   device$(devs) = DEV_NAME(addr)
+1120   IF addr = 0 THEN EXIT devs: END IF
+1130 END FOR devs
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsD.clean.html#dev-name">DEV_NAME</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="move-mem">
+<h2>MOVE_MEM<a class="headerlink" href="#move-mem" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>MOVE_MEM destination, length</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This procedure will copy the appropriate number of bytes from the given source address to the destination address. If there is an overlap in the addresses, then the procedure will notice and take the appropriate action to avoid corrupting the data being moved. Most moves will take place from source to destination, but in the event of an overlap, the move will be from (source + length -1) to (destination + length -1).</p>
+<p>This procedure tries to do the moving as fast as possible and checks the addresses passed as parameters to see how it will do this as follows :-</p>
+<ul class="simple">
+<li>If both addresses are odd, move one byte, increase the source &amp; destination addresses by 1 and drop in to treat them as if both are even, which they now are!</li>
+<li>If both addresses are even, calculate the number of long word moves (4 bytes at a time) that are to be done and do them. Now calculate how many single bytes need to be moved (zero to 3 only) and do them.</li>
+<li>If one address is odd and the other is even the move can only be done one byte at a time, this is quite a lot slower than if long words can be moved.</li>
+</ul>
+<p>The calculations to determine which form of move to be done adds a certain overhead to the function and this can be the slowest part of a memory move that is quite small.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MOVE_MEM</span> <span class="n">SCREEN_BASE</span><span class="p">(</span><span class="c1">#0), SaveScreen_Addr, 32 \* 1024</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="move-position">
+<h2>MOVE_POSITION<a class="headerlink" href="#move-position" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>MOVE_POSITION #channel, relative_position</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This is a similar  procedure to <a class="reference external" href="KeywordsA.clean.html#abs-position">ABS_POSITION</a>, but the file pointer is set to a position relative to the current one.  The direction given can be positive to move forward in the file, or negative to move backwards. The channel must of course be opened to a file on a directory  device.  If the position given would take you back to before the start of the file, the position is left at the start, position 0.  If the move would take you past the end of file, the file is left at end of file.</p>
+<p>After a MOVE_POSITION command, the next access to the given channel, whether read or write, will take place from the new position.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MOVE_POSITION</span> <span class="c1">#3, 0</span>
+</pre></div>
+</div>
+<p>moves the current file pointer on channel 3 to the start of the file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MOVE_POSITION</span> <span class="c1">#3, 6e6</span>
+</pre></div>
+</div>
+<p>moves the current file pointer on channel 3 to the end of the file.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsA.clean.html#abs-position">ABS_POSITION</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="peek-float">
+<h2>PEEK_FLOAT<a class="headerlink" href="#peek-float" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>value = PEEK_FLOAT(address)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns the floating point value represented by the 6 bytes stored at the given address. BEWARE, although this function cannot detect any errors, if the 6 bytes stored at &#8216;address&#8217; are not a proper floating point value, the QL can crash. The crash is caused by QDOS and not by PEEK_FLOAT. This function should be used to retrieve values put there by <a class="reference external" href="KeywordsP.clean.html#poke-float">POKE_FLOAT</a> mentioned above.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">RESERVE_HEAP</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">addr</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="n">THEN</span>
+<span class="mi">1020</span>    <span class="n">PRINT</span> <span class="s2">&quot;OUT OF MEMORY&quot;</span>
+<span class="mi">1030</span>    <span class="n">STOP</span>
+<span class="mi">1040</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1050</span> <span class="n">POKE_FLOAT</span> <span class="n">addr</span><span class="p">,</span> <span class="n">PI</span>
+<span class="mi">1060</span> <span class="n">myPI</span> <span class="o">=</span> <span class="n">PEEK_FLOAT</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+<span class="mi">1070</span> <span class="n">IF</span> <span class="n">myPI</span> <span class="o">&lt;&gt;</span> <span class="n">PI</span> <span class="n">THEN</span>
+<span class="mi">1080</span>    <span class="n">PRINT</span> <span class="s2">&quot;Something went horribly wrong!&quot;</span>
+<span class="mi">1090</span>    <span class="n">PRINT</span> <span class="s2">&quot;PI = &quot;</span> <span class="o">&amp;</span> <span class="n">PI</span> <span class="o">&amp;</span> <span class="s2">&quot;, myPI = &quot;</span> <span class="o">&amp;</span> <span class="n">myPI</span>
+<span class="mi">1100</span> <span class="n">END</span> <span class="n">IF</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#poke-string">POKE_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#peek-string">PEEK_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#poke-float">POKE_FLOAT</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="peek-string">
+<h2>PEEK_STRING<a class="headerlink" href="#peek-string" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>a$ = PEEK_STRING(address, length)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The characters in memory at the given address are returned to a$.  The address may be odd or even as no word for the length is used, the length of the returned string is given by the length parameter.</p>
+<p><strong>EXAMPLE</strong>
+The following set of functions return the Toolkit 2 default devices:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 DEFine FuNction TK2_DATA$
+1010   RETurn TK2_DEFAULT$(176)
+1020 END DEFine TK2_DATA$
+1030 :
+1040 DEFine FuNction TK2_PROG$
+1050   RETurn TK2_DEFAULT$(172)
+1060 END DEFine TK2_PROG$
+1070 :
+1080 DEFine FuNction TK2_DEST$
+1090   RETurn TK2_DEFAULT$(180)
+1100 END DEFine TK2_DEST$
+1110 :
+1120 :
+1200 DEFine FuNction TK2_DEFAULT$(offset)
+1210   LOCal address
+1220   IF offset &lt;&gt; 172 AND offset &lt;&gt; 176 AND offset &lt;&gt; 180 THEN
+1230      PRINT &quot;TK2_DEAFULT$: Invalid Offset: &quot; &amp; offset
+1240      RETurn &#39;&#39;
+1250   END IF
+1260   address = PEEK_L (SYSTEM_VARIABLES + offset)
+1270   IF address = 0 THEN
+1280     RETurn &#39;&#39;
+1290   ELSE
+1300     REMark this is a pointer to the appropriate TK2 default
+1310     RETurn PEEK_STRING(address+2, PEEK_W(address))
+1320   END IF
+1330 END DEFine TK2_DEFAULT$
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#poke-string">POKE_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#peek-float">PEEK_FLOAT</a>, <a class="reference external" href="KeywordsP.clean.html#poke-float">POKE_FLOAT</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="poke-float">
+<h2>POKE_FLOAT<a class="headerlink" href="#poke-float" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>POKE_FLOAT address, value</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This procedure will poke the 6 bytes that the QL uses to represent a floating point variable into memory at the given address. The address can be odd or even as the procedure can cope either way.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">Address</span> <span class="o">=</span> <span class="n">RESERVE_HEAP</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">Address</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="n">THEN</span>
+<span class="mi">1020</span>    <span class="n">PRINT</span> <span class="s2">&quot;ERROR &quot;</span> <span class="o">&amp;</span> <span class="n">Address</span> <span class="o">&amp;</span> <span class="s2">&quot; Allocating heap space.&quot;</span>
+<span class="mi">1030</span>    <span class="n">STOP</span>
+<span class="mi">1040</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1050</span> <span class="n">POKE_FLOAT</span> <span class="n">Address</span><span class="p">,</span> <span class="mf">666.616</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#poke-string">POKE_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#peek-string">PEEK_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#peek-float">PEEK_FLOAT</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="poke-string">
+<h2>POKE_STRING<a class="headerlink" href="#poke-string" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>POKE_STRING address, string</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This procedure simply stores the strings contents at the given address. Only the contents of the string are stored, the 2 bytes defining the length are not stored. The address may be odd or even.</p>
+<p>If the second parameter given is a numeric one or simply a number, beware, QDOS will convert it to the format that would be seen if the number was <a class="reference external" href="KeywordsP.clean.html#print">PRINT</a>ed before storing it at the address.  For example, 1 million would be &#8216;1E6&#8217; which is arithmetically the same, but characterwise, very different.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1000 Address = RESERVE_HEAP(60)
+1010 IF Address &lt; 0 THEN
+1020    PRINT &quot;ERROR &quot; &amp; Address &amp; &quot; Allocating heap space.&quot;
+1030    STOP
+1040 END IF
+1050 POKE_STRING Address, &quot;DJToolkit &quot; &amp; DJTK_VERS$
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#peek-string">PEEK_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#peek-float">PEEK_FLOAT</a>, <a class="reference external" href="KeywordsP.clean.html#poke-float">POKE_FLOAT</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="put-byte">
+<h2>PUT_BYTE<a class="headerlink" href="#put-byte" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>PUT_BYTE #channel, byte</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The given byte is sent to the  channel. If a byte value larger than 255 is given, only the lowest 8 bits of the value are sent. The byte value written to the channel will always be between 0 and 255 even if a negative value is supplied. <a class="reference external" href="KeywordsG.clean.html#get-byte">GET_BYTE</a> returns all values as positive.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PUT_BYTE</span> <span class="c1">#3, 10</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#put-float">PUT_FLOAT</a>, <a class="reference external" href="KeywordsP.clean.html#put-long">PUT_LONG</a>, <a class="reference external" href="KeywordsP.clean.html#put-string">PUT_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#put-word">PUT_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="put-float">
+<h2>PUT_FLOAT<a class="headerlink" href="#put-float" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>PUT_FLOAT #channel, byte</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The given float value is converted to the internal  QDOS format for floating point  numbers and those 6 bytes are sent to the given channel  number.  The full range of QL numbers can be sent including all the negative values. <a class="reference external" href="KeywordsG.clean.html#get-float">GET_FLOAT</a> will return negative values correctly (unless an error occurs).</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PUT_FLOAT</span> <span class="c1">#3, PI</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#put-byte">PUT_BYTE</a>, <a class="reference external" href="KeywordsP.clean.html#put-long">PUT_LONG</a>, <a class="reference external" href="KeywordsP.clean.html#put-string">PUT_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#put-word">PUT_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="put-long">
+<h2>PUT_LONG<a class="headerlink" href="#put-long" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>PUT_LONG #channel, byte</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The long value given is sent as a sequence of four bytes to the channel. Negative values can be put and these will be returned correctly by <a class="reference external" href="KeywordsG.clean.html#get-long">GET_LONG</a> unless any errors occur.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PUT_LONG</span> <span class="c1">#3, 1234567890</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#put-byte">PUT_BYTE</a>, <a class="reference external" href="KeywordsP.clean.html#put-float">PUT_FLOAT</a>, <a class="reference external" href="KeywordsP.clean.html#put-string">PUT_STRING</a>, <a class="reference external" href="KeywordsP.clean.html#put-word">PUT_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="put-string">
+<h2>PUT_STRING<a class="headerlink" href="#put-string" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>PUT_STRING #channel, string</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The string  parameter is sent to the appropriate channel as a two byte word giving the length of the data then the characters of the data. If you send a string of zero length, LET A$ = &#8220;&#8221; for example, then only two bytes will be written to the file.  See <a class="reference external" href="KeywordsP.clean.html#poke-string">POKE_STRING</a> for a description of what will happen if you supply a number or a numeric variable as the second parameter. As with all QL strings, the maximum length of a string is 32kbytes.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PUT_STRING</span> <span class="c1">#3, &quot;This is a string of data&quot;</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#put-byte">PUT_BYTE</a>, <a class="reference external" href="KeywordsP.clean.html#put-float">PUT_FLOAT</a>, <a class="reference external" href="KeywordsP.clean.html#put-long">PUT_LONG</a>, <a class="reference external" href="KeywordsP.clean.html#put-word">PUT_WORD</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="put-word">
+<h2>PUT_WORD<a class="headerlink" href="#put-word" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>PUT_WORD #channel, word</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The supplied word is written to the appropriate channel as a sequence of two bytes. If the word value supplied is bigger than 65,535 then only the lower 16 bits of the value will be used. Negative values will be returned by <a class="reference external" href="KeywordsG.clean.html#get-word">GET_WORD</a> as positive.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PUT_WORD</span> <span class="c1">#3, 65535</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsP.clean.html#put-byte">PUT_BYTE</a>, <a class="reference external" href="KeywordsP.clean.html#put-float">PUT_FLOAT</a>, <a class="reference external" href="KeywordsP.clean.html#put-long">PUT_LONG</a>, <a class="reference external" href="KeywordsP.clean.html#put-string">PUT_STRING</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="qptr">
+<h2>QPTR<a class="headerlink" href="#qptr" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>PE_Found = QPTR(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns 1 if the Pointer Environment is loaded or 0 if not. The channel must be a SCR_ or CON_ channel, if not, the result will be 0. If a silly value is given then a QDOS error code will be returned instead.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PRINT</span> <span class="n">QPTR</span><span class="p">(</span><span class="c1">#0)</span>
+</pre></div>
+</div>
+<p>will print 1 of the PE is loaded or zero otherwise.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="read-header">
+<h2>READ_HEADER<a class="headerlink" href="#read-header" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>error = READ_HEADER(#channel, buffer)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The file that is opened on the given channel has its header data read into memory starting at the given address (buffer). The buffer address must have been reserved using <a class="reference external" href="KeywordsR.clean.html#reserve-heap">RESERVE_HEAP</a>, or some similar command.</p>
+<p>The buffer must be at least 64 bytes long or unpredictable results will occur. The function will read the header but any memory beyond the end of the buffer will be overwritten if the buffer is too short. After a successful call to this function, the contents of the buffer will be as follows :</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="16%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Address</th>
+<th class="head">Value</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Buffer + 0</td>
+<td>File length</td>
+<td>4 bytes long (see <a class="reference external" href="KeywordsF.clean.html#file-length">FILE_LENGTH</a>)</td>
+</tr>
+<tr class="row-odd"><td>Buffer + 4</td>
+<td>File access</td>
+<td>1 byte long - currently zero</td>
+</tr>
+<tr class="row-even"><td>Buffer + 5</td>
+<td>File type</td>
+<td>1 byte long  (see <a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>)</td>
+</tr>
+<tr class="row-odd"><td>Buffer + 6</td>
+<td>File dataspace</td>
+<td>4 bytes long (see <a class="reference external" href="KeywordsF.clean.html#file-dataspace">FILE_DATASPACE</a>)</td>
+</tr>
+<tr class="row-even"><td>Buffer + 10</td>
+<td>Unused</td>
+<td>4 bytes long</td>
+</tr>
+<tr class="row-odd"><td>Buffer + 14</td>
+<td>Name length</td>
+<td>2 bytes long, size of filename</td>
+</tr>
+<tr class="row-even"><td>Buffer + 16</td>
+<td>Filename</td>
+<td>36 bytes long</td>
+</tr>
+</tbody>
+</table>
+<p>Directory devices also have the following additional data :</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="16%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Address</th>
+<th class="head">Value</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Buffer + 52</td>
+<td>Update date</td>
+<td>4 bytes long (see <a class="reference external" href="KeywordsF.clean.html#file-update">FILE_UPDATE</a>)</td>
+</tr>
+<tr class="row-odd"><td>Buffer + 56</td>
+<td>Reference date</td>
+<td>4 bytes long - see below</td>
+</tr>
+<tr class="row-even"><td>Buffer + 60</td>
+<td>Backup date</td>
+<td>4 bytes long (see <a class="reference external" href="KeywordsF.clean.html#file-backup">FILE_BACKUP</a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Miracle Systems hard disc&#8217;s users and level 2 users will find the files version number stored as the the 2 bytes starting at buffer + 56, the remaining 2 bytes of the reference date seem to be hex 094A or decimal 2378 which has no apparent meaning, this of course may change at some point!</p>
+<p>This function returns an error code if something went wrong while attempting to read the file header or zero if everything  went ok.  It can be used as a more efficient method of finding out the details for a particular file rather than calling all the various <a class="reference external" href="KeywordsF.clean.html#file-backup">FILE_XXXX</a> functions. Each of these call the READ_HEADER routine.</p>
+<p>To extract data, use <a class="reference external" href="KeywordsP.clean.html#peek">PEEK</a> for byte values, <a class="reference external" href="KeywordsP.clean.html#peek-w">PEEK_W</a> for the filename length and version number (if level 2 drivers are present, see LEVEL2), or <a class="reference external" href="KeywordsP.clean.html#peek-l">PEEK_L</a> to extract 4 byte data items.</p>
+<p>The filename can be extracted from the buffer by something like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>f$ = PEEK_STRING(buffer + 16, PEEK_W(buffer + 14)).
+</pre></div>
+</div>
+<p><strong>EXAMPLE</strong>
+The following example allows you to change the current dataspace requirements for an <a class="reference external" href="KeywordsE.clean.html#exec">EXEC</a>utable file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>6445 DEFine PROCedure ALTER_DATASPACE
+6450   LOCal base, loop, f$, ft, nv
+6455   base = RESERVE_HEAP (64)
+6460   IF base &lt; 0 THEN
+6465     PRINT &quot;ERROR: &quot; &amp; base &amp; &quot;, reserving heap space.&quot;
+6470     RETurn
+6475   END IF
+6480   REPeat loop
+6485     INPUT&#39;Enter filename:&#39;;f$
+6490     IF f$ = &#39;&#39; THEN EXIT loop
+6495     ft = FILE_TYPE(f$)
+6500     IF ft &lt; 0 THEN
+6465       PRINT &quot;ERROR: &quot; &amp; ft &amp; &quot;, reading file type for &quot; &amp; f$ &amp; &quot;.&quot;
+6510     END IF
+6515     IF ft &lt;&gt; 1 THEN
+6520       PRINT f$ &amp; &#39;is not an executable file!&#39;
+6525       NEXT loop
+6530     END IF
+6535     PRINT &#39;Current dataspace is:&#39;; FILE_DATASPACE(f$)
+6540     INPUT &#39;Enter new value:&#39;; nv
+6545     OPEN #3,f$ : fer = READ_HEADER (#3,base)
+6550     IF fer &lt; 0 : CLOSE #3 : PRINT &quot;READ_HEADER error: &quot; &amp; fer : NEXT loop
+6555     POKE_L base + 6,nv
+6560     fer = SET_HEADER(#3,base)
+6565     IF fer &lt; 0 : PRINT &quot;SET_HEADER error: &quot; &amp; fer
+6570     CLOSE #3
+6575   END REPeat loop
+6580   RELEASE_HEAP base
+6585 END DEFine ALTER_DATASPACE
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsS.clean.html#set-header">SET_HEADER</a>, <a class="reference external" href="KeywordsF.clean.html#file-length">FILE_LENGTH</a>,
+<a class="reference external" href="KeywordsF.clean.html#file-type">FILE_TYPE</a>, <a class="reference external" href="KeywordsF.clean.html#file-dataspace">FILE_DATASPACE</a>,
+<a class="reference external" href="KeywordsF.clean.html#file-update">FILE_UPDATE</a>, <a class="reference external" href="KeywordsF.clean.html#file-backup">FILE_BACKUP</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="release-heap">
+<h2>RELEASE_HEAP<a class="headerlink" href="#release-heap" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>RELEASE_HEAP address</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>The address given is assumed to be the address of a chunk of common heap as allocated earlier in the program by <a class="reference external" href="KeywordsR.clean.html#reserve-heap">RESERVE_HEAP</a>. In order to avoid crashing the QL when an invalid address is given, RELEASE_HEAP checks first that there is a flag at address-4 and if so, clears the flag and returns the memory back to the  system.  If the flag is not there, or if the area has already been released, then a bad parameter error will occur.</p>
+<p>It is more efficient to RELEASE_HEAP in the opposite order to that in which it was reserved and will help to avoid heap fragmentation.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p>See <a class="reference external" href="KeywordsR.clean.html#reserve-heap">RESERVE_HEAP</a>, below, for an example of use.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="reserve-heap">
+<h2>RESERVE_HEAP<a class="headerlink" href="#reserve-heap" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>buffer = RESERVE_HEAP(length)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function obtains a chunk of memory for your program to use, the starting address is returned as the result of the call.  Note that the function will ask for 4 bytes more than you require, these are used to store a flag so that calls to <a class="reference external" href="KeywordsR.clean.html#read-header">READ_HEADER</a> do not crash the system by attempting to deallocate invalid areas of memory. If you call this function, the returned address is the first byte that your program can use.</p>
+<p><strong>EXAMPLE</strong></p>
+<p>The following example shows how this function can be used to reserve a buffer for <a class="reference external" href="KeywordsR.clean.html#read-header">READ_HEADER</a>, described elsewhere.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">RESERVE_HEAP</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">buffer</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="mi">1020</span>    <span class="n">PRINT</span> <span class="s1">&#39;ERROR allocating buffer, &#39;</span> <span class="o">&amp;</span> <span class="n">buffer</span>
+<span class="mi">1030</span>    <span class="n">STOP</span>
+<span class="mi">1040</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1050</span> <span class="n">error</span> <span class="o">=</span> <span class="n">READ_HEADER</span><span class="p">(</span><span class="c1">#3, buffer)</span>
+
+<span class="o">.....</span><span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">buffer</span> <span class="n">contents</span> <span class="n">here</span>
+
+<span class="mi">2040</span> <span class="n">REMark</span> <span class="n">Finished</span> <span class="k">with</span> <span class="n">buffer</span>
+<span class="mi">2050</span> <span class="n">RELEASE_HEAP</span> <span class="n">buffer</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsR.clean.html#release-heap">RELEASE_HEAP</a>, <a class="reference external" href="KeywordsA.clean.html#alchp">ALCHP</a>,
+<a class="reference external" href="KeywordsR.clean.html#rechp">RECHP</a>, <a class="reference external" href="KeywordsA.clean.html#allocate">ALLOCATE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="screen-base">
+<h2>SCREEN_BASE<a class="headerlink" href="#screen-base" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>screen = SCREEN_BASE(#channel)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function is handy for Minerva  users, who have 2 screens to play with. The function returns the address of the start of the screen  memory for the appropriate channel.</p>
+<p>If the returned address is negative, consider it to be a QDOS error code. (-6 means channel not open &amp; -15 means not a SCR_ or CON_ channel.)</p>
+<p>SCREEN_BASE  allows you to write  programs  that need not make guesses about the whereabouts of the screen memory, or assume that if <a class="reference external" href="KeywordsV.clean.html#ver">VER$</a> gives a certain result, that a Minerva ROM is being used, this may not always be the case. Regardless of the ROM in use, this function will always return the screen address for the given channel.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>PRINT HEX$(SCREEN_BASE(#0), 24)
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="screen-mode">
+<h2>SCREEN_MODE<a class="headerlink" href="#screen-mode" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>current_mode = SCREEN_MODE</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function can help in your programs where you need to be in a specific mode.  If you call this function you can find out if a mode change needs to be made or not.  As the <a class="reference external" href="KeywordsM.clean.html#mode">MODE</a> call changes the mode for every program running in the QL, use this function before setting the appropriate mode.</p>
+<p>The value returned can be 4 or 8 for normal QLs, 2 for Atari ST/QL Extended mode 4 or any other value deemed appropriate by the hardware being used. Never assume that your programs will only be run on a QL!</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">REMark</span> <span class="n">Requires</span> <span class="n">MODE</span> <span class="mi">4</span> <span class="k">for</span> <span class="n">best</span> <span class="n">results</span> <span class="n">so</span> <span class="o">...</span>
+<span class="mi">1010</span> <span class="n">IF</span> <span class="n">SCREEN_MODE</span> <span class="o">&lt;&gt;</span> <span class="mi">4</span>
+<span class="mi">1020</span>    <span class="n">MODE</span> <span class="mi">4</span>
+<span class="mi">1030</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1040</span> <span class="p">:</span>
+<span class="mi">1050</span> <span class="n">REMark</span> <span class="n">Rest</span> <span class="n">of</span> <span class="n">program</span> <span class="o">....</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsM.clean.html#mode">MODE</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="search-c">
+<h2>SEARCH_C<a class="headerlink" href="#search-c" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>address = SEARCH_C(start, length, what_for$)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference external" href="KeywordsS.clean.html#search-i">SEARCH_I</a> for details.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsS.clean.html#search-i">SEARCH_I</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="search-i">
+<h2>SEARCH_I<a class="headerlink" href="#search-i" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>address = SEARCH_I(start, length, what_for$)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function, and <a class="reference external" href="KeywordsS.clean.html#search-c">SEARCH_C</a> above, search through memory looking for the given string. <a class="reference external" href="KeywordsS.clean.html#search-c">SEARCH_C</a> searches for an EXACT match whereas SEARCH_I ignores the difference between lower &amp; UPPER case letters.</p>
+<p>If the address  returned is zero, the string was not found,  otherwise it is the address where the first character of what_for$ was found, or negative for any errors that may have occurred.</p>
+<p>If the string  being  searched for is empty (&#8220;&#8221;) then zero will be returned, if the length of the buffer is negative or 0, you will get a &#8216;bad parameter&#8217; error (-15).  The address is considered to be unsigned, so negative addresses will be considered to be very large positive addresses, this allows for any future enhancements which will allow the QL to use a lot more memory than it does now!</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">PRINT</span> <span class="n">SEARCH_C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">48</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="s1">&#39;sinclair&#39;</span><span class="p">)</span>
+<span class="mi">1010</span> <span class="n">PRINT</span> <span class="n">SEARCH_I</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">48</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="s1">&#39;sinclair&#39;</span><span class="p">)</span>
+<span class="mi">1020</span> <span class="n">PRINT</span>
+<span class="mi">1030</span> <span class="n">PRINT</span> <span class="n">SEARCH_C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">48</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="s1">&#39;Sinclair&#39;</span><span class="p">)</span>
+<span class="mi">1040</span> <span class="n">PRINT</span> <span class="n">SEARCH_I</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">48</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="s1">&#39;Sinclair&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The above fragment, on my Gold Card JS QL, prints:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">0</span>
+<span class="mi">47314</span>
+
+<span class="mi">47314</span>
+<span class="mi">47314</span>
+</pre></div>
+</div>
+<p>Looking into the ROM at that address using</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PEEK_STRING</span><span class="p">(</span><span class="mi">47314</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>gives:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Sinclair</span> <span class="n">Research</span> <span class="n">Ltd</span>
+</pre></div>
+</div>
+<p>which is part of the copyright notice that comes up when you switch on your QL. The reason for zero in line 1000 is because the &#8216;s&#8217; is lower case, case is significant and the ROM has a capital &#8216;S&#8217;, so the text was not found in the ROM.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsS.clean.html#search-c">SEARCH_C</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="set-header">
+<h2>SET_HEADER<a class="headerlink" href="#set-header" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>error = SET_HEADER(#channel, buffer)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function  returns the error code that occurred when trying to set the header of the file on the given  channel, to the contents of the 64 byte buffer stored at the given address.  If the result is zero then you can assume that it worked ok, otherwise the result will be a negative QDOS error code.  On normal QLs, the three dates at the end of a file header cannot be set.</p>
+<p><strong>EXAMPLE</strong></p>
+<p>See the example for <a class="reference external" href="KeywordsR.clean.html#read-header">READ_HEADER</a>.</p>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsR.clean.html#read-header">READ_HEADER</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="set-xinc">
+<h2>SET_XINC<a class="headerlink" href="#set-xinc" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>SET_XINC #channel, increment</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference external" href="KeywordsS.clean.html#set-yinc">SET_YINC</a>, below, for details.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="set-yinc">
+<h2>SET_YINC<a class="headerlink" href="#set-yinc" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>SET_YINC #channel, increment</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>These two functions change the spacing between characters horozontally, <a class="reference external" href="KeywordsS.clean.html#set-xinc">SET_XINC</a>, or vertically, SET_YINC. This allows slightly more information to be displayed on the screen. <a class="reference external" href="KeywordsS.clean.html#set-xinc">SET_XINC</a> allows adjacent characters on a line of the screen to be positioned closer or further apart as desired. SET_YINC varies the spacing between the current line of characters and the next.</p>
+<p>By choosing silly values, you can have a real messy screen, but try experimenting with <a class="reference external" href="KeywordsO.clean.html#over">OVER</a> as well to see what happens. Use of the <a class="reference external" href="KeywordsM.clean.html#mode">MODE</a> or <a class="reference external" href="KeywordsC.clean.html#csize">CSIZE</a> commands in SuperBasic will overwrite your new values.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SET_XINC</span> <span class="c1">#2, 22</span>
+<span class="n">SET_YINC</span> <span class="c1">#2, 16</span>
+<span class="n">PRINT</span> <span class="c1">#2, &quot;This is a line of text&quot;</span>
+<span class="n">PRINT</span> <span class="c1">#2, &quot;This is another line of text&quot;</span>
+<span class="n">PRINT</span> <span class="c1">#2, &quot;This is yet another!&quot;</span>
+</pre></div>
+</div>
+<p><strong>CROSS-REFERENCE</strong></p>
+<p><a class="reference external" href="KeywordsS.clean.html#set-xinc">SET_XINC</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="system-variables">
+<h2>SYSTEM_VARIABLES<a class="headerlink" href="#system-variables" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>sys_vars = SYSTEM_VARIABLES</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns the current address of the QL&#8217;s system variables.  For most purposes, this will be hex 28000, decimal 163840, but Minerva users will probably get a different value due to the double screen.  <em>Do not</em> assume that all QLs, current or future, will have their system variables at a fixed point in memory, this need not be the case.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PRINT</span> <span class="n">SYSTEM_VARIABLES</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="use-font">
+<h2>USE_FONT<a class="headerlink" href="#use-font" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>USE_FONT #channel, font1_address, font2_address</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This is a procedure that will allow your programs to use a character set that is different from the standard QL fonts. The following example will suffice as a full description.</p>
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1000</span> <span class="n">REMark</span> <span class="n">Change</span> <span class="n">the</span> <span class="n">character</span> <span class="nb">set</span> <span class="k">for</span> <span class="n">channel</span> <span class="c1">#1</span>
+<span class="mi">1010</span> <span class="p">:</span>
+<span class="mi">1020</span> <span class="n">REMark</span> <span class="n">Reserve</span> <span class="n">space</span> <span class="k">for</span> <span class="n">the</span> <span class="n">font</span> <span class="n">file</span>
+<span class="mi">1030</span> <span class="n">size</span> <span class="o">=</span> <span class="n">FILE_LENGTH</span><span class="p">(</span><span class="s1">&#39;flp1_font_file&#39;</span><span class="p">)</span>
+<span class="mi">1040</span> <span class="n">IF</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="mi">1050</span>    <span class="n">PRINT</span> <span class="s1">&#39;Font file error &#39;</span> <span class="o">&amp;</span> <span class="n">size</span>
+<span class="mi">1060</span>    <span class="n">STOP</span>
+<span class="mi">1070</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1080</span> <span class="p">:</span>
+<span class="mi">1090</span> <span class="n">REMark</span> <span class="n">Reserve</span> <span class="n">space</span> <span class="n">to</span> <span class="n">load</span> <span class="n">font</span> <span class="n">into</span>
+<span class="mi">1200</span> <span class="n">font_address</span> <span class="o">=</span> <span class="n">RESERVE_HEAP</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+<span class="mi">1210</span> <span class="n">IF</span> <span class="n">font_address</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="mi">1220</span>    <span class="n">PRINT</span> <span class="s1">&#39;Heap error &#39;</span> <span class="o">&amp;</span> <span class="n">font_address</span>
+<span class="mi">1230</span>    <span class="n">STOP</span>
+<span class="mi">1240</span> <span class="n">END</span> <span class="n">IF</span>
+<span class="mi">1250</span> <span class="p">:</span>
+<span class="mi">1260</span> <span class="n">REMark</span> <span class="n">Load</span> <span class="n">the</span> <span class="n">font</span>
+<span class="mi">1270</span> <span class="n">LBYTES</span> <span class="n">flp1_font_file</span><span class="p">,</span> <span class="n">font_address</span>
+<span class="mi">1280</span> <span class="p">:</span>
+<span class="mi">1290</span> <span class="n">REMark</span> <span class="n">Now</span> <span class="n">use</span> <span class="n">the</span> <span class="n">new</span> <span class="n">font</span>
+<span class="mi">1300</span> <span class="n">USE_FONT</span> <span class="c1">#1, font_address, 0</span>
+
+<span class="o">.......</span><span class="n">Rest</span> <span class="n">of</span> <span class="n">program</span>
+
+<span class="mi">9000</span> <span class="n">REMark</span> <span class="n">Reset</span> <span class="n">channel</span> <span class="c1">#1 fonts</span>
+<span class="mi">9010</span> <span class="n">USE_FONT</span> <span class="c1">#1, 0, 0</span>
+<span class="mi">9020</span> <span class="p">:</span>
+<span class="mi">9030</span> <span class="n">REMark</span> <span class="n">Release</span> <span class="n">the</span> <span class="n">storage</span> <span class="n">space</span>
+<span class="mi">9040</span> <span class="n">RELEASE_HEAP</span> <span class="n">font_address</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="where-fonts">
+<h2>WHERE_FONTS<a class="headerlink" href="#where-fonts" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Syntax</td>
+<td>address = WHERE_FONTS(#channel, 1_or_2)</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>DJToolkit 1.16</td>
+</tr>
+</tbody>
+</table>
+<p>This function returns a value that corresponds to the address of the fonts in use on the specified channel. The second parameter must be 1 for the first font address or 2 for the second, there are two fonts used on each channel. If the result is negative then it will be a normal QDOS error code. The channel must be a CON_ or a SCR_ channel to avoid errors.</p>
+<p><strong>EXAMPLE</strong></p>
+<p>The following example will report on the two fonts used in any given channel, and will display the character set defined in that font:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>4480 DEFine PROCedure REPORT_ON_FONTS (channel)
+4485   LOCal address, lowest, number, b
+4490   REMark show details of channel&#39;s fonts
+4495   CLS
+4500   FOR a = 1,2
+4505     address = WHERE_FONTS(#channel, a)
+4510     lowest = PEEK(address)
+4515     number = PEEK(address + 1)
+4520     PRINT &#39;#&#39;; channel; &#39; font &#39;; a; &#39; at address &#39;; address
+4525     PRINT &#39;Lowest character code = &#39;; lowest
+4530     PRINT &#39;Number of characters  = &#39;; number + 1
+4535     REMark print all but default characters
+4540     PRINT : REMark blank line
+4545     FOR b = lowest + 1 TO lowest + number :PRINT CHR$(b);
+4550     PRINT \\\ : REMark 2 blank lines
+4555   END FOR a
+4560 END DEFine REPORT_ON_FONTS
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="UPDATES.html" class="btn btn-neutral float-right" title="DJToolkit Updates" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="DJToolkit - The Manual" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright © 2016, Norman Dunbar.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.16.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
