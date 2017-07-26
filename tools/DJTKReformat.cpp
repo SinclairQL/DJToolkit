@@ -24,6 +24,7 @@
 //
 //=========================================================================
 // 2016/12/08  Norman Dunbar  Created.
+// 2017/07/26  Norman Dunbar  Fixed bug in scanning quoted operands.
 //=========================================================================
 
 #include "DJTKReformat.h"
@@ -73,6 +74,7 @@ bool doFile(const char *fname)
     // bit of reformatting in between! :-)
     lineNumber = 0;
     getline(dbf, source_line);
+    
     while (dbf.good()) {
         // What line are we processing now?
         lineNumber++;
@@ -204,20 +206,34 @@ string extractString(string::iterator &x)
     string result;
     
     // We ignore any leading whitespace.
-    while (isspace(*x) && x != source_line.end())
+    while (isspace(*x) && x != source_line.end()) {
+        cerr << "extractString(): Ignoring '" << *x << "'." << endl;
         x++;
+    }
     
     // Now we have something...
     string::iterator startPos = x;
     while (!isspace(*x) && x != source_line.end()) {
+        cerr << "extractString(): Scanning... '" << *x << "'." << endl;
         // Watch out for quotes!
         if (*x == '"' || *x == '\'') {
-            // Scan to end quote.
-            char endQuote = *x;
-            while ((*(x++) != endQuote) && (x != source_line.end()))
+            cerr << "extractString(): Found a quote [" << *x << "]." << endl;
+            // Grab closing quote to search for, and scan to it.
+            char endQuote = *x++;
+            cerr << "extractString(): Scanning for closing quote [" << endQuote << "]." << endl;
+            
+            // Look for the next quote.
+            while ((*x != endQuote) && (x != source_line.end())) {
+                cerr << "extractString(): still in string... '" << *x << "'." << endl;
                 x++;
-        } else 
+            }
+            
+            // Point at the next character after the quote.
             x++;
+        } else {
+            // Not a quote, just keep scanning.
+            x++;
+        }
     }
         
     // Return it.
@@ -233,13 +249,16 @@ string extractComment(string::iterator &x)
     string result;
     
     // We ignore any leading whitespace.
-    while (isspace(*x) && x != source_line.end())
+    while (isspace(*x) && x != source_line.end()) {
+        cerr << "extractComment(): Ignoring '" << *x << "'." << endl;
         x++;
+    }
     
     // Return the result.
-    if (x != source_line.end())
+    if (x != source_line.end()) {
         return result.assign(x, source_line.end());
-    else
+    } else {
         // Empty string.
-        return result;    
+        return result;
+    }
 }

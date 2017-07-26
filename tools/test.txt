@@ -7,18 +7,23 @@
 ; Blank lines are unchanged.                                    ;
 
 
-something   equ something_else,and_another,"a string with spaces"
+linefeed            equ 10
+prompt equ linefeed,"Please enter your name:",linefeed
+prompt2 equ linefeed,
+            "Please enter your name:",
+            linefeed
+
 
 ; Short label.
-l1 nop
+l1 nop  Do nothing
    rts
 
 ; Long Label
 this_label_is_very_long nop
   nop
   nop
-  moveq #-1,d0
-  rts
+  moveq #-1,d0 ; Error code
+  rts * Back to caller
   
 ; Long operands
  movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save everything!

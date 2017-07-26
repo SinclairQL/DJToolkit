@@ -1,111 +1,646 @@
 
 File Name: test.txt
 
-Line 10: [something   equ something_else,and_another,"a string with spaces"]
-LABEL = 'something'
+Line 10: [linefeed            equ 10]
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'd'.
+LABEL = 'linefeed'
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'q'.
+extractString(): Scanning... 'u'.
 OPCODE = 'equ'
 CHECKING: 'equ' with 'rts': No match
 CHECKING: 'equ' with 'nop': No match
-OPERAND = 'something_else,and_another,"a'
-COMMENT = 'string with spaces"'
+extractString(): Ignoring ' '.
+extractString(): Scanning... '1'.
+extractString(): Scanning... '0'.
+OPERAND = '10'
 
-Line 13: [l1 nop]
+Line 11: [prompt equ linefeed,"Please enter your name:",linefeed]
+extractString(): Scanning... 'p'.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'p'.
+extractString(): Scanning... 't'.
+LABEL = 'prompt'
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'q'.
+extractString(): Scanning... 'u'.
+OPCODE = 'equ'
+CHECKING: 'equ' with 'rts': No match
+CHECKING: 'equ' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... ','.
+extractString(): Scanning... '"'.
+extractString(): Found a quote ["].
+extractString(): Scanning for closing quote ["].
+extractString(): still in string... 'P'.
+extractString(): still in string... 'l'.
+extractString(): still in string... 'e'.
+extractString(): still in string... 'a'.
+extractString(): still in string... 's'.
+extractString(): still in string... 'e'.
+extractString(): still in string... ' '.
+extractString(): still in string... 'e'.
+extractString(): still in string... 'n'.
+extractString(): still in string... 't'.
+extractString(): still in string... 'e'.
+extractString(): still in string... 'r'.
+extractString(): still in string... ' '.
+extractString(): still in string... 'y'.
+extractString(): still in string... 'o'.
+extractString(): still in string... 'u'.
+extractString(): still in string... 'r'.
+extractString(): still in string... ' '.
+extractString(): still in string... 'n'.
+extractString(): still in string... 'a'.
+extractString(): still in string... 'm'.
+extractString(): still in string... 'e'.
+extractString(): still in string... ':'.
+extractString(): Scanning... ','.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'd'.
+OPERAND = 'linefeed,"Please enter your name:",linefeed'
+
+Line 12: [prompt2 equ linefeed,]
+extractString(): Scanning... 'p'.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'p'.
+extractString(): Scanning... 't'.
+extractString(): Scanning... '2'.
+LABEL = 'prompt2'
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'q'.
+extractString(): Scanning... 'u'.
+OPCODE = 'equ'
+CHECKING: 'equ' with 'rts': No match
+CHECKING: 'equ' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... ','.
+OPERAND = 'linefeed,'
+
+Line 13: [            "Please enter your name:",]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... '"'.
+extractString(): Found a quote ["].
+extractString(): Scanning for closing quote ["].
+extractString(): still in string... 'P'.
+extractString(): still in string... 'l'.
+extractString(): still in string... 'e'.
+extractString(): still in string... 'a'.
+extractString(): still in string... 's'.
+extractString(): still in string... 'e'.
+extractString(): still in string... ' '.
+extractString(): still in string... 'e'.
+extractString(): still in string... 'n'.
+extractString(): still in string... 't'.
+extractString(): still in string... 'e'.
+extractString(): still in string... 'r'.
+extractString(): still in string... ' '.
+extractString(): still in string... 'y'.
+extractString(): still in string... 'o'.
+extractString(): still in string... 'u'.
+extractString(): still in string... 'r'.
+extractString(): still in string... ' '.
+extractString(): still in string... 'n'.
+extractString(): still in string... 'a'.
+extractString(): still in string... 'm'.
+extractString(): still in string... 'e'.
+extractString(): still in string... ':'.
+extractString(): Scanning... ','.
+OPCODE = '"Please enter your name:",'
+CHECKING: '"Please enter your name:",' with 'rts': No match
+CHECKING: '"Please enter your name:",' with 'nop': No match
+OPERAND = ''
+
+Line 14: [            linefeed]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'd'.
+OPCODE = 'linefeed'
+CHECKING: 'linefeed' with 'rts': No match
+CHECKING: 'linefeed' with 'nop': No match
+OPERAND = ''
+
+Line 18: [l1 nop  Do nothing]
+extractString(): Scanning... 'l'.
+extractString(): Scanning... '1'.
 LABEL = 'l1'
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'p'.
 OPCODE = 'nop'
 CHECKING: 'nop' with 'rts': No match
 CHECKING: 'nop' with 'nop': Matched
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+COMMENT = 'Do nothing'
 
-Line 14: [   rts]
+Line 19: [   rts]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 't'.
+extractString(): Scanning... 's'.
 OPCODE = 'rts'
 CHECKING: 'rts' with 'rts': Matched
 
-Line 17: [this_label_is_very_long nop]
+Line 22: [this_label_is_very_long nop]
+extractString(): Scanning... 't'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... 'b'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'v'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 'y'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'g'.
 LABEL = 'this_label_is_very_long'
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'p'.
 OPCODE = 'nop'
 CHECKING: 'nop' with 'rts': No match
 CHECKING: 'nop' with 'nop': Matched
 
-Line 18: [  nop]
+Line 23: [  nop]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'p'.
 OPCODE = 'nop'
 CHECKING: 'nop' with 'rts': No match
 CHECKING: 'nop' with 'nop': Matched
 
-Line 19: [  nop]
+Line 24: [  nop]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'p'.
 OPCODE = 'nop'
 CHECKING: 'nop' with 'rts': No match
 CHECKING: 'nop' with 'nop': Matched
 
-Line 20: [  moveq #-1,d0]
+Line 25: [  moveq #-1,d0 ; Error code]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'v'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'q'.
 OPCODE = 'moveq'
 CHECKING: 'moveq' with 'rts': No match
 CHECKING: 'moveq' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... '#'.
+extractString(): Scanning... '-'.
+extractString(): Scanning... '1'.
+extractString(): Scanning... ','.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '0'.
 OPERAND = '#-1,d0'
+extractComment(): Ignoring ' '.
+COMMENT = '; Error code'
 
-Line 21: [  rts]
+Line 26: [  rts * Back to caller]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 't'.
+extractString(): Scanning... 's'.
 OPCODE = 'rts'
 CHECKING: 'rts' with 'rts': Matched
+extractComment(): Ignoring ' '.
+COMMENT = '* Back to caller'
 
-Line 22: [  ]
+Line 27: [  ]
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
 OPCODE = ''
 CHECKING: '' with 'rts': No match
 CHECKING: '' with 'nop': No match
 OPERAND = ''
 
-Line 24: [ movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save everything!]
+Line 29: [ movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save everything!]
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'v'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... '.'.
+extractString(): Scanning... 'l'.
 OPCODE = 'movem.l'
 CHECKING: 'movem.l' with 'rts': No match
 CHECKING: 'movem.l' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '0'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '1'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '2'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '3'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '4'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '5'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '6'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '7'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '0'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '1'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '2'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '3'.
+extractString(): Scanning... '-'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '6'.
+extractString(): Scanning... ','.
+extractString(): Scanning... '-'.
+extractString(): Scanning... '('.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '7'.
+extractString(): Scanning... ')'.
 OPERAND = 'd0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)'
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
 COMMENT = 'Save everything!'
 
-Line 25: [ movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save it all again!]
+Line 30: [ movem.l d0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)       Save it all again!]
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'v'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... '.'.
+extractString(): Scanning... 'l'.
 OPCODE = 'movem.l'
 CHECKING: 'movem.l' with 'rts': No match
 CHECKING: 'movem.l' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '0'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '1'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '2'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '3'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '4'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '5'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '6'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... '7'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '0'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '1'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '2'.
+extractString(): Scanning... '/'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '3'.
+extractString(): Scanning... '-'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '6'.
+extractString(): Scanning... ','.
+extractString(): Scanning... '-'.
+extractString(): Scanning... '('.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... '7'.
+extractString(): Scanning... ')'.
 OPERAND = 'd0/d1/d2/d3/d4/d5/d6/d7/a0/a1/a2/a3-a6,-(a7)'
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
+extractComment(): Ignoring ' '.
 COMMENT = 'Save it all again!'
 
-Line 26: [ ]
+Line 31: [ ]
+extractString(): Ignoring ' '.
 OPCODE = ''
 CHECKING: '' with 'rts': No match
 CHECKING: '' with 'nop': No match
 OPERAND = ''
 
-Line 28: [ jsr some_code_somewhere_else_in_this_file ]
+Line 33: [ jsr some_code_somewhere_else_in_this_file ]
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'j'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'r'.
 OPCODE = 'jsr'
 CHECKING: 'jsr' with 'rts': No match
 CHECKING: 'jsr' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'c'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'w'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 't'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'e'.
 OPERAND = 'some_code_somewhere_else_in_this_file'
+extractComment(): Ignoring ' '.
 COMMENT = ''
 
-Line 29: [ jsr some_code_somewhere_else_in_this_file ; And we have a comment here too.]
+Line 34: [ jsr some_code_somewhere_else_in_this_file ; And we have a comment here too.]
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'j'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'r'.
 OPCODE = 'jsr'
 CHECKING: 'jsr' with 'rts': No match
 CHECKING: 'jsr' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'c'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'w'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 't'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'e'.
 OPERAND = 'some_code_somewhere_else_in_this_file'
+extractComment(): Ignoring ' '.
 COMMENT = '; And we have a comment here too.'
 
-Line 30: [ ]
+Line 35: [ ]
+extractString(): Ignoring ' '.
 OPCODE = ''
 CHECKING: '' with 'rts': No match
 CHECKING: '' with 'nop': No match
 OPERAND = ''
 
-Line 32: [This_label_is_long  jsr some_code_somewhere_else_in_this_file ; And we have a comment here too.]
+Line 37: [This_label_is_long  jsr some_code_somewhere_else_in_this_file ; And we have a comment here too.]
+extractString(): Scanning... 'T'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'a'.
+extractString(): Scanning... 'b'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... 'g'.
 LABEL = 'This_label_is_long'
+extractString(): Ignoring ' '.
+extractString(): Ignoring ' '.
+extractString(): Scanning... 'j'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'r'.
 OPCODE = 'jsr'
 CHECKING: 'jsr' with 'rts': No match
 CHECKING: 'jsr' with 'nop': No match
+extractString(): Ignoring ' '.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'c'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'd'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'o'.
+extractString(): Scanning... 'm'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'w'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'r'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... 'e'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'n'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 't'.
+extractString(): Scanning... 'h'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 's'.
+extractString(): Scanning... '_'.
+extractString(): Scanning... 'f'.
+extractString(): Scanning... 'i'.
+extractString(): Scanning... 'l'.
+extractString(): Scanning... 'e'.
 OPERAND = 'some_code_somewhere_else_in_this_file'
+extractComment(): Ignoring ' '.
 COMMENT = '; And we have a comment here too.'
 
-Line 33: [ ]
+Line 38: [ ]
+extractString(): Ignoring ' '.
 OPCODE = ''
 CHECKING: '' with 'rts': No match
 CHECKING: '' with 'nop': No match
 OPERAND = ''
 
-Line 34: [ ]
+Line 39: [ ]
+extractString(): Ignoring ' '.
 OPCODE = ''
 CHECKING: '' with 'rts': No match
 CHECKING: '' with 'nop': No match
