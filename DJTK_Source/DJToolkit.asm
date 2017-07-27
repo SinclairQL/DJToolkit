@@ -487,7 +487,7 @@ sb_ret_d1  cmpi.w  #SD_SCRB,d7         Which routine is this ?
            ext.l   d1                  Save the sign too !
            bra.s   sb_ret_sb           Skip AH and JM processing
 
-sb_silly   dc.b    'Thanks             Ralf !!'    Handy help is credited !
+sb_silly   dc.b    'Thanks Ralf !!'    Handy help is credited !
 
 sb_ret_128 move.l  #128,d1             Result is 128 for Ah and JM ROMs
 
@@ -2508,7 +2508,7 @@ dj_over    moveq   #3,d5               Flag DJ_OPEN_OVER
 dj_dir     moveq   #4,d5               Flag DJ_OPEN_DIR
            bra.s   do_open
 
-sng_credit dc.b    'Credit             to SNG'
+sng_credit dc.b    'Credit to SNG'
 
 do_open    bsr     count_pars          Count params
            subq.w  #1,d0               I need only 1
