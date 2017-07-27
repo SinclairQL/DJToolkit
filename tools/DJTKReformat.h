@@ -43,7 +43,7 @@ string source_line;
 // List of opcodes that take no operand. Or at least, the ones I use!
 // And I only use lower case.
 //======================================================================
-string noOperand_[] = {"rts", "nop"};
+string noOperand_[] = {"nop", "reset", "rte", "rtr", "rts", "trapv"};
 list<string> noOperands(noOperand_, noOperand_ + sizeof(noOperand_)/ sizeof(string));
 
 //======================================================================

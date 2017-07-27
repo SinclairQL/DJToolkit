@@ -125,11 +125,24 @@ void reformatLine()
     
     // There might be an operand. NOP etc excepted!
     // Oh, and we like lower case opcodes!
+    // Yes, but other people don't.
     bool needOperand = true;
     for (list<string>::iterator y = noOperands.begin(); y != noOperands.end(); y++) {
+	
+	// Lowercase the opcode from the file, the list is in lowercase already.
+	// We need the destination to be big enough first though!
+	string opcodeLower = opcode;
+	
+	// This doesn't work!
+	//transform(operand.begin(), operand.end(), opcodeLower.begin(), tolower());
+	for (string::iterator x = opcodeLower.begin(); x != opcodeLower.end(); x++) {
+	    *x = tolower(*x);
+	}
+	
         // Do we need an operand?
-        cerr << "CHECKING: '" << opcode << "' with '" << *y << "': ";
-        if (!opcode.compare(*y)) {
+        cerr << "CHECKING: '" << opcodeLower << "' with '" << *y << "': ";
+	
+        if (!opcodeLower.compare(*y)) {
             needOperand = false;
             cerr << "Matched" << endl;
             break;
