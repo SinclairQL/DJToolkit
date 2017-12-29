@@ -60,7 +60,10 @@ bool doFile(const char *fname)
 
     // Open it in binary as this is (most likely) Windows and the
     // source is most likely QDOS line feeds, no carriage returns!
-    dbf = ifstream(fname, std::ifstream::in | std::ifstream::binary);
+
+    // The following line doesn't work if using non-borland compilers!
+    //dbf = ifstream(fname, std::ifstream::in | std::ifstream::binary);
+    dbf.open(fname, std::ifstream::in | std::ifstream::binary);
     if (!(dbf.good())) {
         cerr << endl << "Cannot open file '" << fname << "'." << endl;
         return false;
